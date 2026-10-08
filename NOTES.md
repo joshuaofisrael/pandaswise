@@ -60,3 +60,4 @@ IndexNow key file at the site root (/pandaswise/<key>.txt), indexnow.sh.
 - Brand PandaWise became PandasWise everywhere (titles, JSON-LD Organization and WebSite, footer, about, llms.txt, og.png).
 - Repo renamed pandawise to pandaswise. Pages URL is now https://joshuaofisrael.github.io/pandaswise/. The old /pandawise/ Pages URL no longer serves the site (GitHub redirects the repo, not Pages). IndexNow was resubmitted with the new URLs.
 - No CNAME. When pandaswise.com is bought, change BASE_URL in build.py, add CNAME, rebuild and push once.
+- Live check and IndexNow at 11:58 BST on 8 Oct 2026: every sitemap URL, robots.txt, sitemap.xml, llms.txt and the key file return 200. IndexNow returned HTTP 202 for 22 URLs.
