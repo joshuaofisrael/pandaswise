@@ -18,3 +18,5 @@ FormSubmit 12:28 BST: one activation test POST from pandaswise.com origin: HTTP 
 | Date | Window | Impressions | Clicks | CTR | Avg pos | Indexed pages | Top100/20/10/3 queries | Growing pages | Declining pages | Conversions |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-08 | 7d | n/a (no GSC yet) | n/a | n/a | n/a | 22 URLs in sitemap (pandaswise.com) | n/a | n/a | n/a | n/a |
+
+Redesign + legal 14:30 BST: light cute redesign and Terms, Disclaimer, Privacy (LLC, Michigan law) live, all 200. IndexNow 24 URLs: HTTP 200.
