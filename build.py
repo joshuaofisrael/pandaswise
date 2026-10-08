@@ -10,7 +10,7 @@ containing the bare domain, run `python3 build.py`, commit and push, then ping I
 import json, os, re, html, glob, datetime
 
 # ---------------------------------------------------------------- configuration
-BASE_URL = "https://joshuaofisrael.github.io/pandaswise/"   # <- the ONE line to change for a custom domain
+BASE_URL = "https://pandaswise.com/"   # <- the ONE line to change for a custom domain
 SITE = "PandasWise"
 LEGAL = "Joshua Israel Ventures LLC"
 GSC_TOKEN = ""        # Google Search Console HTML tag token (content="...") once Joshua adds the property
@@ -271,6 +271,12 @@ def build():
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(L) + "\n")
     # IndexNow key file
     open(os.path.join(ROOT, INDEXNOW_KEY + ".txt"), "w").write(INDEXNOW_KEY)
+    host = re.sub(r"^https?://([^/]+).*$", r"\1", BASE_URL)
+    cname = os.path.join(ROOT, "CNAME")
+    if host.endswith("github.io"):
+        if os.path.exists(cname): os.remove(cname)
+    else:
+        open(cname, "w").write(host + "\n")
     print(f"built {len(pages)} pages + 404 for {BASE_URL}")
 
 if __name__ == "__main__":
