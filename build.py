@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PandaWise static site builder.
+"""PandasWise static site builder.
 
 Renders content/*.html fragments into static HTML at the repo root (GitHub Pages
 "Deploy from a branch", main, root). No dependencies beyond the Python standard library.
@@ -10,15 +10,15 @@ containing the bare domain, run `python3 build.py`, commit and push, then ping I
 import json, os, re, html, glob, datetime
 
 # ---------------------------------------------------------------- configuration
-BASE_URL = "https://joshuaofisrael.github.io/pandawise/"   # <- the ONE line to change for a custom domain
-SITE = "PandaWise"
+BASE_URL = "https://joshuaofisrael.github.io/pandaswise/"   # <- the ONE line to change for a custom domain
+SITE = "PandasWise"
 LEGAL = "Joshua Israel Ventures LLC"
 GSC_TOKEN = ""        # Google Search Console HTML tag token (content="...") once Joshua adds the property
 CF_BEACON_TOKEN = ""  # Cloudflare Web Analytics beacon token, once a site exists for this hostname
 CONTACT_EMAIL = "joshuaofisrael@gmail.com"  # FormSubmit endpoint owner (shared JI Ventures inbox)
 ROOT = os.path.dirname(os.path.abspath(__file__))
 INDEXNOW_KEY = open(os.path.join(ROOT, ".indexnow_key")).read().strip()
-BASE_PATH = re.sub(r"^https?://[^/]+", "", BASE_URL)  # "/pandawise/" now, "/" on a custom domain
+BASE_PATH = re.sub(r"^https?://[^/]+", "", BASE_URL)  # "/pandaswise/" now, "/" on a custom domain
 HOST = re.sub(r"^https?://([^/]+).*$", r"\1", BASE_URL)
 OG_IMAGE = BASE_URL + "og.png"
 
@@ -29,7 +29,7 @@ NAV = [("index", "Home"), ("where-to-see-pandas", "Where to See Pandas"), ("gian
        ("blog/index", "Blog")]
 
 LOGO = ('<svg role="img" width="36" height="36" viewBox="0 0 64 64" aria-labelledby="logo-t">'
-        '<title id="logo-t">PandaWise logo</title>'
+        '<title id="logo-t">PandasWise logo</title>'
         '<circle cx="15" cy="17" r="9" fill="#111"/><circle cx="49" cy="17" r="9" fill="#111"/>'
         '<circle cx="32" cy="35" r="23" fill="#f4f6f2"/>'
         '<ellipse cx="23" cy="33" rx="6" ry="8" transform="rotate(-25 23 33)" fill="#111"/>'
@@ -169,7 +169,7 @@ def render(p, pages):
         "We use Cloudflare Web Analytics to count page views. It does not use cookies or local storage and does not "
         "collect personal data to track you across sites; it records anonymous information such as the page visited, "
         "referrer, browser type and country.") if CF_BEACON_TOKEN else (
-        "PandaWise does not currently run any analytics script. If we add one, we plan to use Cloudflare Web Analytics, "
+        "PandasWise does not currently run any analytics script. If we add one, we plan to use Cloudflare Web Analytics, "
         "which does not use cookies, and we will update this section before it goes live."))
     if p["kind"] in ("pillar", "post", "page", "blog_index"):
         out.append(f'<h1>{esc(p["h1"])}</h1>')
@@ -226,7 +226,7 @@ def build():
     # 404 (absolute links, noindex)
     nf = render({"slug": "404", "kind": "page", "title": f"Page not found | {SITE}", "noindex": True,
                  "description": "This page could not be found.", "h1": "Page not found", "short": "Not found",
-                 "body": '<p class="lead">Sorry, that page does not exist. Try the <a href="@/index.html">PandaWise home page</a>, '
+                 "body": '<p class="lead">Sorry, that page does not exist. Try the <a href="@/index.html">PandasWise home page</a>, '
                          'the <a href="@/giant-panda.html">giant panda guide</a> or the <a href="@/where-to-see-pandas.html">list of zoos with pandas</a>.</p>'},
                 pages)
     nf = re.sub(r'(href|src)="(?!https?:|#|/)([^"]*)"', lambda m: f'{m.group(1)}="{BASE_PATH}{m.group(2)}"', nf)
@@ -257,7 +257,7 @@ def build():
     L = [f"# {SITE}", "",
          f"> {SITE} is a free, original educational website about giant pandas (Ailuropoda melanoleuca) and red pandas "
          "(Ailurus). It explains panda biology, diet, behavior, habitat, conservation status and how the two species differ, "
-         "and keeps a dated, sourced list of where giant pandas can be seen in zoos and reserves. "
+         "and keeps a verified, country by country list of zoos and reserves where giant pandas and red pandas can be seen, each entry checked against an official page with a last verified date. "
          f"Operated by {LEGAL}.", "",
          "Content is general education written from cited sources (IUCN, WWF, Smithsonian's National Zoo, San Diego Zoo "
          "Wildlife Alliance, peer reviewed studies and official zoo announcements). Zoo details change; check with the zoo before visiting.",

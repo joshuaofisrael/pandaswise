@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Ping IndexNow (Bing, Yandex, Seznam, Naver...) for PandaWise.
+# Ping IndexNow (Bing, Yandex, Seznam, Naver...) for PandasWise.
 # Usage: ./indexnow.sh URL [URL...]   (no args = every URL in the live sitemap.xml)
 # BASE_URL and the key are read from build.py / .indexnow_key, so this keeps working after a domain switch.
 cd "$(dirname "$0")"

@@ -1,4 +1,4 @@
-# PandaWise SEO log
+# PandasWise SEO log
 
 ## 2026-10-08 Day 1 launch (no Search Console data yet)
 Built v1: 21 indexable pages (home, 9 guides, where-to-see-pandas tool, 6 blog posts, blog index, about, contact, privacy) plus 404.
