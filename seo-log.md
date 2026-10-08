@@ -10,7 +10,11 @@ Rebrand (11:55 steering): PandasWise, repo renamed to pandaswise, base URL https
 Live check 11:58 BST: all 22 sitemap URLs plus robots.txt, sitemap.xml, llms.txt, key file, og.png and style.css return 200; 404 page returns 404; GPTBot, ClaudeBot, PerplexityBot, Googlebot and Bingbot user agents get 200.
 IndexNow 11:58 BST: POST api.indexnow.org with all 22 sitemap URLs (includes blog/why-are-red-pandas-red.html), host joshuaofisrael.github.io, keyLocation /pandaswise/3307b908c0c7e41a8ba7f9140b4756d5.txt: HTTP 202 (accepted, key validation pending).
 
+Domain switch 12:27 to 12:38 BST: pandaswise.com live with HTTPS enforced (cert for apex and www). All 22 sitemap URLs return 200 on https://pandaswise.com/; www, http and the old github.io URL all 301 to https://pandaswise.com/.
+IndexNow 12:38 BST: host pandaswise.com, 22 URLs, keyLocation https://pandaswise.com/3307b908c0c7e41a8ba7f9140b4756d5.txt: HTTP 202.
+FormSubmit 12:28 BST: one activation test POST from pandaswise.com origin: HTTP 200, activation email sent.
+
 ## Scorecard
 | Date | Window | Impressions | Clicks | CTR | Avg pos | Indexed pages | Top100/20/10/3 queries | Growing pages | Declining pages | Conversions |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2026-10-08 | 7d | n/a (no GSC yet) | n/a | n/a | n/a | 22 URLs in sitemap | n/a | n/a | n/a | n/a |
+| 2026-10-08 | 7d | n/a (no GSC yet) | n/a | n/a | n/a | 22 URLs in sitemap (pandaswise.com) | n/a | n/a | n/a | n/a |
