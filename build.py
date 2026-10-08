@@ -30,12 +30,12 @@ NAV = [("index", "Home"), ("where-to-see-pandas", "Where to See Pandas"), ("gian
 
 LOGO = ('<svg role="img" width="36" height="36" viewBox="0 0 64 64" aria-labelledby="logo-t">'
         '<title id="logo-t">PandasWise logo</title>'
-        '<circle cx="15" cy="17" r="9" fill="#111"/><circle cx="49" cy="17" r="9" fill="#111"/>'
-        '<circle cx="32" cy="35" r="23" fill="#f4f6f2"/>'
-        '<ellipse cx="23" cy="33" rx="6" ry="8" transform="rotate(-25 23 33)" fill="#111"/>'
-        '<ellipse cx="41" cy="33" rx="6" ry="8" transform="rotate(25 41 33)" fill="#111"/>'
-        '<circle cx="24" cy="32" r="2" fill="#f4f6f2"/><circle cx="40" cy="32" r="2" fill="#f4f6f2"/>'
-        '<ellipse cx="32" cy="44" rx="4" ry="3" fill="#111"/>'
+        '<circle cx="15" cy="17" r="9" fill="#2b2f2c"/><circle cx="49" cy="17" r="9" fill="#2b2f2c"/>'
+        '<circle cx="32" cy="35" r="23" fill="#fff" stroke="#2b2f2c" stroke-width="2"/>'
+        '<ellipse cx="23" cy="33" rx="6" ry="8" transform="rotate(-25 23 33)" fill="#2b2f2c"/>'
+        '<ellipse cx="41" cy="33" rx="6" ry="8" transform="rotate(25 41 33)" fill="#2b2f2c"/>'
+        '<circle cx="24" cy="32" r="2" fill="#fff"/><circle cx="40" cy="32" r="2" fill="#fff"/>'
+        '<ellipse cx="32" cy="44" rx="4" ry="3" fill="#2b2f2c"/>'
         '<path d="M50 60 C56 50 60 44 62 34" stroke="#7cc45a" stroke-width="3" fill="none"/>'
         '<path d="M58 44 C52 42 50 38 51 34 C56 36 58 40 58 44Z" fill="#7cc45a"/></svg>')
 
@@ -66,8 +66,9 @@ SOURCES = {
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
 }
 
-ORG = {"@type": "Organization", "name": SITE, "url": BASE_URL, "legalName": LEGAL,
-       "logo": BASE_URL + "logo.png"}
+ORG = {"@type": "Organization", "@id": BASE_URL + "#organization", "name": LEGAL, "legalName": LEGAL,
+       "url": BASE_URL, "logo": BASE_URL + "logo.png", "email": "joshuaofisrael@gmail.com",
+       "brand": {"@type": "Brand", "name": SITE, "url": BASE_URL, "logo": BASE_URL + "logo.png"}}
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -116,7 +117,9 @@ def render(p, pages):
     head += [f"<title>{esc(title)}</title>", f'<meta name="description" content="{esc(desc)}">']
     if p.get("noindex"): head.append('<meta name="robots" content="noindex">')
     else: head.append(f'<link rel="canonical" href="{canon}">')
-    head += [f'<link rel="stylesheet" href="{R}style.css">',
+    head += ['<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&display=swap">',
+             f'<link rel="stylesheet" href="{R}style.css">',
              f'<link rel="icon" href="{R}favicon.svg" type="image/svg+xml">',
              f'<meta property="og:type" content="{"website" if p["kind"] in ("home","page","blog_index") else "article"}">',
              f'<meta property="og:site_name" content="{SITE}">',
@@ -169,8 +172,8 @@ def render(p, pages):
         "We use Cloudflare Web Analytics to count page views. It does not use cookies or local storage and does not "
         "collect personal data to track you across sites; it records anonymous information such as the page visited, "
         "referrer, browser type and country.") if CF_BEACON_TOKEN else (
-        "PandasWise does not currently run any analytics script. If we add one, we plan to use Cloudflare Web Analytics, "
-        "which does not use cookies, and we will update this section before it goes live."))
+        "PandasWise does not currently run any analytics. We may add Cloudflare Web Analytics, which does not use cookies; "
+        "if we do, we will update this policy before it goes live."))
     if p["kind"] in ("pillar", "post", "page", "blog_index"):
         out.append(f'<h1>{esc(p["h1"])}</h1>')
         if p["kind"] in ("pillar", "post"):
@@ -203,12 +206,11 @@ def render(p, pages):
     out.append(f'<footer><section class="contact-us" aria-labelledby="contact-us-h"><h2 id="contact-us-h">Contact us</h2>'
                f'<p>Questions, corrections or suggestions? Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> '
                f'or use our <a href="{rel_href("contact", depth)}">contact form</a>.</p></section>')
-    out.append(f'<p>{SITE}: original educational content about giant pandas and red pandas. '
-               'All text and illustrations are original.</p>'
-               f'<p class="op">Operated by {LEGAL}</p>'
-               f'<p><a href="{rel_href("about", depth)}">About</a> &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
-               f' &middot; <a href="{rel_href("privacy", depth)}">Privacy</a> &middot; <a href="{rel_href("blog/index", depth)}">Blog</a></p>'
-               '<p>&copy; 2026 Joshua Israel</p></footer>')
+    out.append(f'<p class="op">&copy; 2026 {LEGAL}. All rights reserved. {SITE} is owned and operated by {LEGAL}.</p>'
+               f'<p class="flinks"><a href="{rel_href("terms", depth)}">Terms</a> &middot; <a href="{rel_href("privacy", depth)}">Privacy</a>'
+               f' &middot; <a href="{rel_href("disclaimer", depth)}">Disclaimer</a> &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
+               f' &middot; <a href="{rel_href("about", depth)}">About</a> &middot; <a href="{rel_href("blog/index", depth)}">Blog</a></p>'
+               f'<p>{SITE}: original educational content about giant pandas and red pandas. All text and illustrations are original.</p></footer>')
     if CF_BEACON_TOKEN:
         out.append("<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
                    f"data-cf-beacon='{{\"token\": \"{CF_BEACON_TOKEN}\"}}'></script><!-- End Cloudflare Web Analytics -->")
@@ -234,7 +236,7 @@ def build():
     open(os.path.join(ROOT, "404.html"), "w").write(nf)
     # sitemap
     idx = [p for p in pages.values() if not p.get("noindex")]
-    order = [s for s, _ in NAV] + ["about", "contact", "privacy"]
+    order = [s for s, _ in NAV] + ["about", "contact", "terms", "privacy", "disclaimer"]
     idx.sort(key=lambda p: (order.index(p["slug"]) if p["slug"] in order else 100, p["slug"]))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for p in idx:
@@ -258,7 +260,7 @@ def build():
          f"> {SITE} is a free, original educational website about giant pandas (Ailuropoda melanoleuca) and red pandas "
          "(Ailurus). It explains panda biology, diet, behavior, habitat, conservation status and how the two species differ, "
          "and keeps a verified, country by country list of zoos and reserves where giant pandas and red pandas can be seen, each entry checked against an official page with a last verified date. "
-         f"Operated by {LEGAL}.", "",
+         f"{SITE} is a brand owned and operated by {LEGAL}.", "",
          "Content is general education written from cited sources (IUCN, WWF, Smithsonian's National Zoo, San Diego Zoo "
          "Wildlife Alliance, peer reviewed studies and official zoo announcements). Zoo details change; check with the zoo before visiting.",
          "", "## Guides"] + [item(s) for s in guides] + [
@@ -267,7 +269,7 @@ def build():
          f"  - Sections: [Giant pandas by country]({w}#outside-china), [Giant pandas in China]({w}#china), "
          f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [
-         "", "## Optional", item("about"), item("contact"), item("privacy")]
+         "", "## Optional", item("about"), item("contact"), item("terms"), item("privacy"), item("disclaimer")]
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(L) + "\n")
     # IndexNow key file
     open(os.path.join(ROOT, INDEXNOW_KEY + ".txt"), "w").write(INDEXNOW_KEY)

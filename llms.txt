@@ -1,6 +1,6 @@
 # PandasWise
 
-> PandasWise is a free, original educational website about giant pandas (Ailuropoda melanoleuca) and red pandas (Ailurus). It explains panda biology, diet, behavior, habitat, conservation status and how the two species differ, and keeps a verified, country by country list of zoos and reserves where giant pandas and red pandas can be seen, each entry checked against an official page with a last verified date. Operated by Joshua Israel Ventures LLC.
+> PandasWise is a free, original educational website about giant pandas (Ailuropoda melanoleuca) and red pandas (Ailurus). It explains panda biology, diet, behavior, habitat, conservation status and how the two species differ, and keeps a verified, country by country list of zoos and reserves where giant pandas and red pandas can be seen, each entry checked against an official page with a last verified date. PandasWise is a brand owned and operated by Joshua Israel Ventures LLC.
 
 Content is general education written from cited sources (IUCN, WWF, Smithsonian's National Zoo, San Diego Zoo Wildlife Alliance, peer reviewed studies and official zoo announcements). Zoo details change; check with the zoo before visiting.
 
@@ -30,4 +30,6 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 ## Optional
 - [About PandasWise](https://pandaswise.com/about.html): Who runs PandasWise, what it covers, how pages are researched and sourced, how we keep the zoo list current, and how to report a correction.
 - [Contact PandasWise](https://pandaswise.com/contact.html): Contact the PandasWise team with corrections, zoo updates, questions or suggestions by email or through our simple contact form.
-- [Privacy policy](https://pandaswise.com/privacy.html): How PandasWise handles data: no accounts, no ads, no tracking cookies, how contact form messages are processed, and how to reach us about privacy.
+- [Terms of use](https://pandaswise.com/terms.html): The terms for using PandasWise, a brand of Joshua Israel Ventures LLC: general information only, no warranties, limitation of liability and Michigan law.
+- [Privacy policy](https://pandaswise.com/privacy.html): How PandasWise and Joshua Israel Ventures LLC handle personal data: only contact form and email messages, no analytics, no ads and no tracking cookies.
+- [Disclaimer](https://pandaswise.com/disclaimer.html): PandasWise disclaimer: how accurate our panda information is, why it is not professional advice, and our current lack of affiliate or advertising links.
