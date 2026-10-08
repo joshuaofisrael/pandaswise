@@ -23,7 +23,7 @@ Pillars: giant-panda, red-panda, diet, behavior, habitat, conservation, giant-vs
 Unique asset: where-to-see-pandas (every giant panda zoo outside mainland China, dated 8 Oct 2026, per row source links,
 anchors #outside-china #recent #none-now #china #red-pandas #tips).
 Blog: how-much-bamboo-does-a-panda-eat, are-giant-pandas-still-endangered, are-red-pandas-related-to-giant-pandas,
-do-pandas-hibernate, why-are-pandas-black-and-white.
+do-pandas-hibernate, why-are-pandas-black-and-white, why-are-red-pandas-red (draft supplied by Personal assistant, fact checked and lightly edited).
 Trust: about, contact (FormSubmit to joshuaofisrael@gmail.com + mailto), privacy. 404 (noindex).
 Every page: unique title/description, canonical, OG + og:image (og.png, original), JSON-LD (WebSite+Organization on home;
 Article/BlogPosting with dates+image; BreadcrumbList; FAQPage only for visible Q&As; AboutPage/ContactPage), visible

@@ -25,6 +25,7 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 - [Do pandas hibernate?](https://joshuaofisrael.github.io/pandawise/blog/do-pandas-hibernate.html): Giant pandas do not hibernate: bamboo cannot build the fat reserves hibernation needs. How they cope with winter, and how red pandas use short dormancy instead.
 - [How much bamboo does a giant panda eat a day?](https://joshuaofisrael.github.io/pandawise/blog/how-much-bamboo-does-a-panda-eat.html): A giant panda eats roughly 12 to 45 kg of bamboo a day. Why sources disagree, how shoots vs leaves change the number, and how red pandas compare.
 - [Why are giant pandas black and white?](https://joshuaofisrael.github.io/pandawise/blog/why-are-pandas-black-and-white.html): Why giant pandas are black and white: the leading study points to snow and shade camouflage for the body and signalling for the ears and eye patches.
+- [Why are red pandas red?](https://joshuaofisrael.github.io/pandawise/blog/why-are-red-pandas-red.html): Red pandas are red because the russet coat blends with reddish brown moss and white lichen in their forest canopy. How the coat, mask, black belly and ringed tail work.
 
 ## Optional
 - [About PandaWise](https://joshuaofisrael.github.io/pandawise/about.html): Who runs PandaWise, what it covers, how pages are researched and sourced, how we keep the zoo list current, and how to report a correction.
