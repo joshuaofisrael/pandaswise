@@ -1,0 +1,32 @@
+# PandaWise
+
+> PandaWise is a free, original educational website about giant pandas (Ailuropoda melanoleuca) and red pandas (Ailurus). It explains panda biology, diet, behavior, habitat, conservation status and how the two species differ, and keeps a dated, sourced list of where giant pandas can be seen in zoos and reserves. Operated by Joshua Israel Ventures LLC.
+
+Content is general education written from cited sources (IUCN, WWF, Smithsonian's National Zoo, San Diego Zoo Wildlife Alliance, peer reviewed studies and official zoo announcements). Zoo details change; check with the zoo before visiting.
+
+## Guides
+- [Giant panda facts](https://joshuaofisrael.github.io/pandawise/giant-panda.html): Giant panda facts in one place: scientific name, size and weight, the pseudo thumb, how cubs grow, lifespan, wild population and IUCN status, with sources.
+- [Red panda facts](https://joshuaofisrael.github.io/pandawise/red-panda.html): Red panda facts: why it is not a bear or a raccoon, the two species debate, size, bamboo diet, life in the trees, cubs, lifespan and Endangered status, with sources.
+- [Panda diet: what pandas eat](https://joshuaofisrael.github.io/pandawise/diet.html): What giant pandas and red pandas eat, how much bamboo they need each day, why bamboo barely feeds them, what else they eat, and what zoos feed them.
+- [Panda behavior](https://joshuaofisrael.github.io/pandawise/behavior.html): How giant pandas and red pandas behave: daily routine, sleep, solitary life, scent marking and handstands, vocal sounds, climbing, mating season and raising cubs.
+- [Panda habitat and range](https://joshuaofisrael.github.io/pandawise/habitat.html): Where giant pandas and red pandas live in the wild: mountain ranges, countries, elevations, forest types and the Giant Panda National Park.
+- [Panda conservation](https://joshuaofisrael.github.io/pandawise/conservation.html): Giant panda and red panda conservation explained: IUCN status history, latest population numbers, the main threats, what has worked, and practical ways to help.
+- [Giant panda vs red panda comparison](https://joshuaofisrael.github.io/pandawise/giant-vs-red-panda.html): Giant panda vs red panda compared side by side: family, size, weight, diet, range, behavior, cubs, lifespan and IUCN status, plus what they have in common.
+- [Panda FAQ: myths vs facts](https://joshuaofisrael.github.io/pandawise/faq.html): Panda myths and facts answered with sources: are pandas lazy, bad at breeding, raccoons, endangered, dangerous or only in China? Clear answers for both pandas.
+- [Panda glossary](https://joshuaofisrael.github.io/pandawise/glossary.html): Plain English definitions of the words you meet when reading about giant pandas and red pandas, from Ailuridae and bamboo culm to pseudo thumb and umbrella species.
+
+## Tools
+- [Where to see giant pandas: zoo list](https://joshuaofisrael.github.io/pandawise/where-to-see-pandas.html): Every zoo outside mainland China with giant pandas as of 8 October 2026, by country and panda name, with recent changes and where to see red pandas.
+  - Sections: [Giant pandas outside mainland China](https://joshuaofisrael.github.io/pandawise/where-to-see-pandas.html#outside-china), [Reserves and bases in China](https://joshuaofisrael.github.io/pandawise/where-to-see-pandas.html#china), [Red pandas](https://joshuaofisrael.github.io/pandawise/where-to-see-pandas.html#red-pandas), [Countries with no giant pandas now](https://joshuaofisrael.github.io/pandawise/where-to-see-pandas.html#none-now)
+
+## Blog
+- [Are giant pandas still endangered?](https://joshuaofisrael.github.io/pandawise/blog/are-giant-pandas-still-endangered.html): Giant pandas are no longer Endangered: the IUCN lists them as Vulnerable since 2016. What that means, the latest population figures, and what still threatens them.
+- [Are red pandas related to giant pandas?](https://joshuaofisrael.github.io/pandawise/blog/are-red-pandas-related-to-giant-pandas.html): Red and giant pandas are only distant relatives: one is a bear, the other the last of its own family. What DNA shows, and why both have a false thumb.
+- [Do pandas hibernate?](https://joshuaofisrael.github.io/pandawise/blog/do-pandas-hibernate.html): Giant pandas do not hibernate: bamboo cannot build the fat reserves hibernation needs. How they cope with winter, and how red pandas use short dormancy instead.
+- [How much bamboo does a giant panda eat a day?](https://joshuaofisrael.github.io/pandawise/blog/how-much-bamboo-does-a-panda-eat.html): A giant panda eats roughly 12 to 45 kg of bamboo a day. Why sources disagree, how shoots vs leaves change the number, and how red pandas compare.
+- [Why are giant pandas black and white?](https://joshuaofisrael.github.io/pandawise/blog/why-are-pandas-black-and-white.html): Why giant pandas are black and white: the leading study points to snow and shade camouflage for the body and signalling for the ears and eye patches.
+
+## Optional
+- [About PandaWise](https://joshuaofisrael.github.io/pandawise/about.html): Who runs PandaWise, what it covers, how pages are researched and sourced, how we keep the zoo list current, and how to report a correction.
+- [Contact PandaWise](https://joshuaofisrael.github.io/pandawise/contact.html): Contact the PandaWise team with corrections, zoo updates, questions or suggestions by email or through our simple contact form.
+- [Privacy policy](https://joshuaofisrael.github.io/pandawise/privacy.html): How PandaWise handles data: no accounts, no ads, no tracking cookies, how contact form messages are processed, and how to reach us about privacy.
