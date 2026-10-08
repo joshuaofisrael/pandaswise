@@ -19,4 +19,5 @@ FormSubmit 12:28 BST: one activation test POST from pandaswise.com origin: HTTP 
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-08 | 7d | n/a (no GSC yet) | n/a | n/a | n/a | 22 URLs in sitemap (pandaswise.com) | n/a | n/a | n/a | n/a |
 
-Redesign + legal 14:30 BST: light cute redesign and Terms, Disclaimer, Privacy (LLC, Michigan law) live, all 200. IndexNow 24 URLs: HTTP 200.
+Redesign + legal 14:30 BST: light cute redesign and Terms, Disclaimer, Privacy (LLC, governing law) live, all 200. IndexNow 24 URLs: HTTP 200.
+LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt updated.

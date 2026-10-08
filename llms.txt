@@ -30,6 +30,6 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 ## Optional
 - [About PandasWise](https://pandaswise.com/about.html): Who runs PandasWise, what it covers, how pages are researched and sourced, how we keep the zoo list current, and how to report a correction.
 - [Contact PandasWise](https://pandaswise.com/contact.html): Contact the PandasWise team with corrections, zoo updates, questions or suggestions by email or through our simple contact form.
-- [Terms of use](https://pandaswise.com/terms.html): The terms for using PandasWise, a brand of Joshua Israel Ventures LLC: general information only, no warranties, limitation of liability and Michigan law.
+- [Terms of use](https://pandaswise.com/terms.html): The terms for using PandasWise, a brand of Joshua Israel Ventures LLC: general information only, no warranties, limitation of liability and Florida law.
 - [Privacy policy](https://pandaswise.com/privacy.html): How PandasWise and Joshua Israel Ventures LLC handle personal data: only contact form and email messages, no analytics, no ads and no tracking cookies.
 - [Disclaimer](https://pandaswise.com/disclaimer.html): PandasWise disclaimer: how accurate our panda information is, why it is not professional advice, and our current lack of affiliate or advertising links.
