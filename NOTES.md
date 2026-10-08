@@ -46,3 +46,12 @@ IndexNow key file at the site root (/pandawise/<key>.txt), indexnow.sh.
 
 ## Log
 - 2026-10-08: v1 launched. See seo-log.md for IndexNow responses and the scorecard.
+
+## Flagship: Where to see pandas (verified 8 October 2026)
+- Every giant panda and red panda row was checked against the zoo's own official page, or its operator's or local government's official page, on 8 October 2026. Each row shows "8 Oct 2026" in a Last verified column and links to the page checked.
+- Giant pandas: 21 zoos in 16 countries plus Hong Kong, Macao and Taiwan. All rows from the first draft were kept after official confirmation, but news sources were replaced with official ones. Details that only news outlets reported were removed (Everland twins' December move and the cub's name, Taman Safari's agreement end date, Ouwehands cub Lang Yue, Macao's adult pair).
+- Weaker official sources worth rechecking: Zoo Negara (official LinkedIn post, because the zoo website did not name the pandas), Copenhagen Zoo (press release via Ritzau), Everland (operator Samsung C&T), Moscow (city portal zoo.mos.ru), Qatar (Visit Qatar).
+- China: Chengdu Panda Base and the UNESCO sanctuaries are verified. CCRCGP bases (Wolong Shenshuping, Bifengxia) are mentioned but not listed as verified because no official page loaded.
+- Red pandas (verified selection): Adelaide Zoo, Darjeeling zoo, Ouwehands, Edinburgh Zoo, Chester Zoo, Smithsonian's National Zoo.
+- Recheck due: Macao twins leave in early November 2026; Zoo Atlanta debut 6 November 2026; Singapore and Beauval twins have 2027 dates.
+- Nav: "Where to See Pandas" is the first item after Home; the home page has a featured card, a hero button and the first tile.

@@ -22,3 +22,4 @@ form label{display:block;margin:.6rem 0 .2rem;font-weight:600}form input,form te
 footer{text-align:center;padding:2rem 1rem;color:#9aa89e;font-size:.85rem;border-top:1px solid #2c3630}footer a{color:#cfd9d1}footer .op{color:#eef2ee;font-weight:600}
 @media(max-width:760px){.menu{display:block}nav{display:none;width:100%;flex-direction:column}body.open nav{display:flex}.hero h1{font-size:1.8rem}.related ul{columns:1}}
 .contact-us{max-width:640px;margin:0 auto 1.2rem;padding:1rem 1.2rem;background:#1a211d;border:1px solid #2c3a31;border-radius:14px}.contact-us h2{margin:0 0 .3rem;font-size:1.1rem;color:#a9de8b}.contact-us p{margin:0;color:#e3ebe4;font-size:.95rem}.contact-us a{color:#a9de8b;font-weight:600}
+.card.feature{border:2px solid #8fd16a;background:linear-gradient(135deg,#1f3322,#171d19)}.card.feature h2 a{color:#f4f6f2;text-decoration:none}

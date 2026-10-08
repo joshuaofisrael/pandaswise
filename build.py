@@ -22,9 +22,9 @@ BASE_PATH = re.sub(r"^https?://[^/]+", "", BASE_URL)  # "/pandawise/" now, "/" o
 HOST = re.sub(r"^https?://([^/]+).*$", r"\1", BASE_URL)
 OG_IMAGE = BASE_URL + "og.png"
 
-NAV = [("index", "Home"), ("giant-panda", "Giant Panda"), ("red-panda", "Red Panda"),
-       ("diet", "Diet"), ("behavior", "Behavior"), ("habitat", "Habitat"),
-       ("conservation", "Conservation"), ("where-to-see-pandas", "Where to See"),
+NAV = [("index", "Home"), ("where-to-see-pandas", "Where to See Pandas"), ("giant-panda", "Giant Panda"),
+       ("red-panda", "Red Panda"), ("diet", "Diet"), ("behavior", "Behavior"), ("habitat", "Habitat"),
+       ("conservation", "Conservation"),
        ("giant-vs-red-panda", "Giant vs Red"), ("faq", "FAQ"), ("glossary", "Glossary"),
        ("blog/index", "Blog")]
 
@@ -264,8 +264,8 @@ def build():
          "", "## Guides"] + [item(s) for s in guides] + [
          "", "## Tools",
          item("where-to-see-pandas"),
-         f"  - Sections: [Giant pandas outside mainland China]({w}#outside-china), [Reserves and bases in China]({w}#china), "
-         f"[Red pandas]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
+         f"  - Sections: [Giant pandas by country]({w}#outside-china), [Giant pandas in China]({w}#china), "
+         f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [
          "", "## Optional", item("about"), item("contact"), item("privacy")]
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(L) + "\n")
