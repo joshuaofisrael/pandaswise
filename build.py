@@ -210,7 +210,7 @@ def render(p, pages):
                f'<p class="flinks"><a href="{rel_href("terms", depth)}">Terms</a> &middot; <a href="{rel_href("privacy", depth)}">Privacy</a>'
                f' &middot; <a href="{rel_href("disclaimer", depth)}">Disclaimer</a> &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
                f' &middot; <a href="{rel_href("about", depth)}">About</a> &middot; <a href="{rel_href("blog/index", depth)}">Blog</a></p>'
-               f'<p>{SITE}: original educational content about giant pandas and red pandas. All text and illustrations are original.</p></footer>')
+               f'<p>{SITE}: original educational content about giant pandas and red pandas. All text and illustrations are original. Photos are credited on our <a href="{R}credits/">photo credits</a> page.</p></footer>')
     if CF_BEACON_TOKEN:
         out.append("<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
                    f"data-cf-beacon='{{\"token\": \"{CF_BEACON_TOKEN}\"}}'></script><!-- End Cloudflare Web Analytics -->")
