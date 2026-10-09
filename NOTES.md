@@ -70,3 +70,6 @@ IndexNow key file at the site root (/pandaswise/<key>.txt), indexnow.sh.
 - IndexNow 12:38: host pandaswise.com, keyLocation https://pandaswise.com/3307b908c0c7e41a8ba7f9140b4756d5.txt, 22 URLs: HTTP 202.
 - FormSubmit 12:28: one test POST to https://formsubmit.co/joshuaofisrael@gmail.com with Referer https://pandaswise.com/contact.html and Origin https://pandaswise.com. Response HTTP 200, page said "This form needs Activation. We've sent you an email containing an 'Activate Form' link." Joshua must click that link in the joshuaofisrael@gmail.com inbox; until then submissions are not delivered.
 - Search Console: add a Domain property or URL prefix https://pandaswise.com/ and send the token for GSC_TOKEN. Cloudflare beacon still needs a token for pandaswise.com.
+
+## Neon redesign and photos (9 Oct 2026, 09:25 slot)
+- Neon palette (night purple header and hero, glowing pink, lime and cyan accents; body text dark on light for AA). 10 Wikimedia Commons photos (6 public domain, 4 CC0... see /credits/; 1 CC BY SA 3.0 Grosser Panda with caption attribution) on home strip and 7 pillar pages, WebP, lazy loaded. /credits/ page added, footer links it. IndexNow HTTP 200 for 25 URLs. Still open: /games/ hub (reuse ../panda-games-staging) and teachers hub (EDU brief).
