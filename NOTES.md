@@ -73,3 +73,6 @@ IndexNow key file at the site root (/pandaswise/<key>.txt), indexnow.sh.
 
 ## Neon redesign and photos (9 Oct 2026, 09:25 slot)
 - Neon palette (night purple header and hero, glowing pink, lime and cyan accents; body text dark on light for AA). 10 Wikimedia Commons photos (6 public domain, 4 CC0... see /credits/; 1 CC BY SA 3.0 Grosser Panda with caption attribution) on home strip and 7 pillar pages, WebP, lazy loaded. /credits/ page added, footer links it. IndexNow HTTP 200 for 25 URLs. Still open: /games/ hub (reuse ../panda-games-staging) and teachers hub (EDU brief).
+
+## Games hub (11 Oct 2026, 00:25 slot)
+- /games/ hub, /games/bamboo-breakfast/ (canvas catch game) and /games/which-panda-is-it/ (giant, red or both sorting quiz). Original code and art, no sound, localStorage best scores only, VideoGame JSON-LD with LLC publisher, facts from existing SOURCES. USPTO check: no marks for BAMBOO BREAKFAST or WHICH PANDA. Credits in games/CREDITS.md. Nav item Games and a home hero button added. Still open: teachers hub (EDU brief).
