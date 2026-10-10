@@ -1,0 +1,31 @@
+<!--META {"kind":"page","schema":"VideoGame","title":"Bamboo Breakfast: Free Giant Panda Catching Game | PandasWise","description":"Bamboo Breakfast is a free giant panda game: catch falling bamboo for 30 seconds and learn sourced facts about how much bamboo pandas really eat.","h1":"Bamboo Breakfast","short":"Bamboo Breakfast","nav":"games/index","published":"2026-10-11","modified":"2026-10-11","related":["diet","giant-panda","games/index"],"src":["si-giant","wwf-giant","nie2015"]} -->
+<p class="lead">Giant pandas spend most of their waking day eating. Help this one catch as much bamboo as it can in 30 seconds. Move with the arrow keys, the A and D keys, or by dragging on the game.</p>
+<div class="card" style="text-align:center">
+<canvas id="bb" width="480" height="360" style="width:100%;max-width:480px;touch-action:none;border-radius:16px;background:linear-gradient(#efe4ff,#e8fbe0)" aria-label="Bamboo Breakfast game area" role="img"></canvas>
+<p><button class="btn" id="bbgo">Start</button> <span id="bbscore" aria-live="polite">Score 0</span> &middot; <span id="bbbest">Best 0</span></p>
+<div id="bbfact" class="card feature" hidden aria-live="polite"></div>
+</div>
+<h2>What this game teaches</h2>
+<ul><li>About 99% of a giant panda's diet is bamboo, and it eats every above ground part of the plant.</li>
+<li>Pandas spend roughly 10 to 16 hours a day feeding, because bamboo gives them very little energy.</li>
+<li>A 2015 study in Science (Nie and colleagues) found giant pandas use exceptionally little energy each day, which helps them live on bamboo.</li></ul>
+<p>Read more in our <a href="@/diet.html">giant panda and red panda diet guide</a>.</p>
+<p class="note">Bamboo Breakfast is an original work &copy; 2026 Joshua Israel Ventures LLC.</p>
+<script>
+(function(){var c=document.getElementById('bb'),x=c.getContext('2d'),W=480,H=360,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var F=["About 99% of a giant panda's diet is bamboo.","Giant pandas feed for roughly 10 to 16 hours a day.","A giant panda eats every above ground part of the bamboo plant: leaves, stems and shoots.","Giant pandas use exceptionally little energy each day, which helps them survive on bamboo (Nie et al., 2015, Science).","An adult giant panda weighs roughly 70 to 125 kg."];
+var px=W/2,items=[],score=0,t=0,run=false,keys={},last=0,best=+(localStorage.getItem('pw_bb_best')||0);
+var S=document.getElementById('bbscore'),B=document.getElementById('bbbest'),FC=document.getElementById('bbfact'),G=document.getElementById('bbgo');B.textContent='Best '+best;
+function panda(){x.save();x.translate(px,H-40);x.fillStyle='#2b2f2c';x.beginPath();x.arc(-22,-24,11,0,7);x.arc(22,-24,11,0,7);x.fill();x.fillStyle='#fff';x.strokeStyle='#2b2f2c';x.lineWidth=3;x.beginPath();x.arc(0,0,32,0,7);x.fill();x.stroke();x.fillStyle='#2b2f2c';x.beginPath();x.ellipse(-12,-4,7,9,-.4,0,7);x.ellipse(12,-4,7,9,.4,0,7);x.fill();x.beginPath();x.ellipse(0,12,5,4,0,0,7);x.fill();x.fillStyle='#fff';x.beginPath();x.arc(-11,-6,2.5,0,7);x.arc(11,-6,2.5,0,7);x.fill();x.fillStyle='#ff8fc8';x.beginPath();x.arc(-22,10,4,0,7);x.arc(22,10,4,0,7);x.fill();x.restore();}
+function shoot(o){x.save();x.translate(o.x,o.y);x.fillStyle='#5fc23a';x.fillRect(-4,-18,8,36);x.fillStyle='#3d8a22';x.fillRect(-5,-2,10,3);x.fillStyle='#9be46f';x.beginPath();x.ellipse(9,-14,10,4,-.5,0,7);x.fill();x.restore();}
+function draw(){x.clearRect(0,0,W,H);x.fillStyle='#3a1f6b';x.font='bold 16px Nunito,sans-serif';x.fillText('Time '+Math.max(0,Math.ceil(30-t)),12,24);items.forEach(shoot);panda();}
+function loop(now){if(!run)return;var dt=Math.min(.05,(now-last)/1000||0);last=now;t+=dt;var sp=rm?220:320;if(keys.l)px-=sp*dt;if(keys.r)px+=sp*dt;px=Math.max(32,Math.min(W-32,px));
+if(Math.random()<dt*(1.6+t/12))items.push({x:20+Math.random()*(W-40),y:-20,v:(rm?90:120)+Math.random()*80+t*3});
+items.forEach(function(o){o.y+=o.v*dt});items=items.filter(function(o){if(o.y>H-80&&o.y<H-20&&Math.abs(o.x-px)<38){score++;S.textContent='Score '+score;return false}return o.y<H+20});
+draw();if(t>=30)return end();requestAnimationFrame(loop);}
+function end(){run=false;if(score>best){best=score;localStorage.setItem('pw_bb_best',best);B.textContent='Best '+best}FC.hidden=false;FC.innerHTML='<h2>You caught '+score+' bamboo shoots!</h2><p>Panda fact: '+F[Math.floor(Math.random()*F.length)]+'</p>';G.textContent='Play again';G.disabled=false;}
+G.onclick=function(){items=[];score=0;t=0;px=W/2;S.textContent='Score 0';FC.hidden=true;run=true;G.disabled=true;last=performance.now();requestAnimationFrame(loop);};
+addEventListener('keydown',function(e){if(!run)return;if(e.key=='ArrowLeft'||e.key=='a'){keys.l=1;e.preventDefault()}if(e.key=='ArrowRight'||e.key=='d'){keys.r=1;e.preventDefault()}});
+addEventListener('keyup',function(e){if(e.key=='ArrowLeft'||e.key=='a')keys.l=0;if(e.key=='ArrowRight'||e.key=='d')keys.r=0});
+function mv(e){var r=c.getBoundingClientRect();px=(e.clientX-r.left)*W/r.width;}c.addEventListener('pointerdown',mv);c.addEventListener('pointermove',function(e){if(e.buttons||e.pointerType!='mouse')mv(e)});draw();})();
+</script>

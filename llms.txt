@@ -17,6 +17,9 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 
 ## Tools
 - [Where to see pandas: verified zoo list](https://pandaswise.com/where-to-see-pandas.html): Zoos and reserves with giant pandas and red pandas, country by country, each checked against the zoo's own official page on 8 October 2026.
+- [Panda games](https://pandaswise.com/games/): Free, original panda games for kids and adults. Catch bamboo with a hungry giant panda, then sort facts into giant panda or red panda. Every round ends with a real, sourced fact.
+- [Bamboo Breakfast](https://pandaswise.com/games/bamboo-breakfast/): Bamboo Breakfast is a free giant panda game: catch falling bamboo for 30 seconds and learn sourced facts about how much bamboo pandas really eat.
+- [Which Panda Is It?](https://pandaswise.com/games/which-panda-is-it/): A free sorting game: read a fact and decide whether it describes the giant panda, the red panda, or both. Ten rounds, each with a sourced explanation.
   - Sections: [Giant pandas by country](https://pandaswise.com/where-to-see-pandas.html#outside-china), [Giant pandas in China](https://pandaswise.com/where-to-see-pandas.html#china), [Red pandas by country](https://pandaswise.com/where-to-see-pandas.html#red-pandas), [Countries with no giant pandas now](https://pandaswise.com/where-to-see-pandas.html#none-now)
 
 ## Blog

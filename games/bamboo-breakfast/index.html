@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bamboo Breakfast: Free Giant Panda Catching Game | PandasWise</title>
+<meta name="description" content="Bamboo Breakfast is a free giant panda game: catch falling bamboo for 30 seconds and learn sourced facts about how much bamboo pandas really eat.">
+<link rel="canonical" href="https://pandaswise.com/games/bamboo-breakfast/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PandasWise">
+<meta property="og:title" content="Bamboo Breakfast: Free Giant Panda Catching Game | PandasWise">
+<meta property="og:description" content="Bamboo Breakfast is a free giant panda game: catch falling bamboo for 30 seconds and learn sourced facts about how much bamboo pandas really eat.">
+<meta property="og:url" content="https://pandaswise.com/games/bamboo-breakfast/">
+<meta property="og:image" content="https://pandaswise.com/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pandaswise.com/"}, {"@type": "ListItem", "position": 2, "name": "Bamboo Breakfast", "item": "https://pandaswise.com/games/bamboo-breakfast/"}], "@context": "https://schema.org"}</script>
+<script type="application/ld+json">{"@type": "VideoGame", "name": "Bamboo Breakfast", "url": "https://pandaswise.com/games/bamboo-breakfast/", "description": "Bamboo Breakfast is a free giant panda game: catch falling bamboo for 30 seconds and learn sourced facts about how much bamboo pandas really eat.", "publisher": {"@type": "Organization", "@id": "https://pandaswise.com/#organization", "name": "Joshua Israel Ventures LLC", "legalName": "Joshua Israel Ventures LLC", "url": "https://pandaswise.com/", "logo": "https://pandaswise.com/logo.png", "email": "joshuaofisrael@gmail.com", "brand": {"@type": "Brand", "name": "PandasWise", "url": "https://pandaswise.com/", "logo": "https://pandaswise.com/logo.png"}}, "@context": "https://schema.org"}</script>
+</head><body>
+<header><a class="brand" href="../../index.html"><svg role="img" width="36" height="36" viewBox="0 0 64 64" aria-labelledby="logo-t"><title id="logo-t">PandasWise logo</title><circle cx="15" cy="17" r="9" fill="#2b2f2c"/><circle cx="49" cy="17" r="9" fill="#2b2f2c"/><circle cx="32" cy="35" r="23" fill="#fff" stroke="#2b2f2c" stroke-width="2"/><ellipse cx="23" cy="33" rx="6" ry="8" transform="rotate(-25 23 33)" fill="#2b2f2c"/><ellipse cx="41" cy="33" rx="6" ry="8" transform="rotate(25 41 33)" fill="#2b2f2c"/><circle cx="24" cy="32" r="2" fill="#fff"/><circle cx="40" cy="32" r="2" fill="#fff"/><ellipse cx="32" cy="44" rx="4" ry="3" fill="#2b2f2c"/><path d="M50 60 C56 50 60 44 62 34" stroke="#7cc45a" stroke-width="3" fill="none"/><path d="M58 44 C52 42 50 38 51 34 C56 36 58 40 58 44Z" fill="#7cc45a"/></svg><span>PandasWise</span></a><button class="menu" aria-label="Menu" onclick="document.body.classList.toggle('open')">&#9776;</button><nav><a href="../../index.html">Home</a><a href="../../where-to-see-pandas.html">Where to See Pandas</a><a href="../../giant-panda.html">Giant Panda</a><a href="../../red-panda.html">Red Panda</a><a href="../../diet.html">Diet</a><a href="../../behavior.html">Behavior</a><a href="../../habitat.html">Habitat</a><a href="../../conservation.html">Conservation</a><a href="../../giant-vs-red-panda.html">Giant vs Red</a><a href="../../faq.html">FAQ</a><a href="../../glossary.html">Glossary</a><a href="../../blog/">Blog</a><a href="../../games/" aria-current=page>Games</a></nav></header><main>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Home</a> &rsaquo; <span>Bamboo Breakfast</span></nav>
+<h1>Bamboo Breakfast</h1>
+<p class="lead">Giant pandas spend most of their waking day eating. Help this one catch as much bamboo as it can in 30 seconds. Move with the arrow keys, the A and D keys, or by dragging on the game.</p>
+<div class="card" style="text-align:center">
+<canvas id="bb" width="480" height="360" style="width:100%;max-width:480px;touch-action:none;border-radius:16px;background:linear-gradient(#efe4ff,#e8fbe0)" aria-label="Bamboo Breakfast game area" role="img"></canvas>
+<p><button class="btn" id="bbgo">Start</button> <span id="bbscore" aria-live="polite">Score 0</span> &middot; <span id="bbbest">Best 0</span></p>
+<div id="bbfact" class="card feature" hidden aria-live="polite"></div>
+</div>
+<h2>What this game teaches</h2>
+<ul><li>About 99% of a giant panda's diet is bamboo, and it eats every above ground part of the plant.</li>
+<li>Pandas spend roughly 10 to 16 hours a day feeding, because bamboo gives them very little energy.</li>
+<li>A 2015 study in Science (Nie and colleagues) found giant pandas use exceptionally little energy each day, which helps them live on bamboo.</li></ul>
+<p>Read more in our <a href="../../diet.html">giant panda and red panda diet guide</a>.</p>
+<p class="note">Bamboo Breakfast is an original work &copy; 2026 Joshua Israel Ventures LLC.</p>
+<script>
+(function(){var c=document.getElementById('bb'),x=c.getContext('2d'),W=480,H=360,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var F=["About 99% of a giant panda's diet is bamboo.","Giant pandas feed for roughly 10 to 16 hours a day.","A giant panda eats every above ground part of the bamboo plant: leaves, stems and shoots.","Giant pandas use exceptionally little energy each day, which helps them survive on bamboo (Nie et al., 2015, Science).","An adult giant panda weighs roughly 70 to 125 kg."];
+var px=W/2,items=[],score=0,t=0,run=false,keys={},last=0,best=+(localStorage.getItem('pw_bb_best')||0);
+var S=document.getElementById('bbscore'),B=document.getElementById('bbbest'),FC=document.getElementById('bbfact'),G=document.getElementById('bbgo');B.textContent='Best '+best;
+function panda(){x.save();x.translate(px,H-40);x.fillStyle='#2b2f2c';x.beginPath();x.arc(-22,-24,11,0,7);x.arc(22,-24,11,0,7);x.fill();x.fillStyle='#fff';x.strokeStyle='#2b2f2c';x.lineWidth=3;x.beginPath();x.arc(0,0,32,0,7);x.fill();x.stroke();x.fillStyle='#2b2f2c';x.beginPath();x.ellipse(-12,-4,7,9,-.4,0,7);x.ellipse(12,-4,7,9,.4,0,7);x.fill();x.beginPath();x.ellipse(0,12,5,4,0,0,7);x.fill();x.fillStyle='#fff';x.beginPath();x.arc(-11,-6,2.5,0,7);x.arc(11,-6,2.5,0,7);x.fill();x.fillStyle='#ff8fc8';x.beginPath();x.arc(-22,10,4,0,7);x.arc(22,10,4,0,7);x.fill();x.restore();}
+function shoot(o){x.save();x.translate(o.x,o.y);x.fillStyle='#5fc23a';x.fillRect(-4,-18,8,36);x.fillStyle='#3d8a22';x.fillRect(-5,-2,10,3);x.fillStyle='#9be46f';x.beginPath();x.ellipse(9,-14,10,4,-.5,0,7);x.fill();x.restore();}
+function draw(){x.clearRect(0,0,W,H);x.fillStyle='#3a1f6b';x.font='bold 16px Nunito,sans-serif';x.fillText('Time '+Math.max(0,Math.ceil(30-t)),12,24);items.forEach(shoot);panda();}
+function loop(now){if(!run)return;var dt=Math.min(.05,(now-last)/1000||0);last=now;t+=dt;var sp=rm?220:320;if(keys.l)px-=sp*dt;if(keys.r)px+=sp*dt;px=Math.max(32,Math.min(W-32,px));
+if(Math.random()<dt*(1.6+t/12))items.push({x:20+Math.random()*(W-40),y:-20,v:(rm?90:120)+Math.random()*80+t*3});
+items.forEach(function(o){o.y+=o.v*dt});items=items.filter(function(o){if(o.y>H-80&&o.y<H-20&&Math.abs(o.x-px)<38){score++;S.textContent='Score '+score;return false}return o.y<H+20});
+draw();if(t>=30)return end();requestAnimationFrame(loop);}
+function end(){run=false;if(score>best){best=score;localStorage.setItem('pw_bb_best',best);B.textContent='Best '+best}FC.hidden=false;FC.innerHTML='<h2>You caught '+score+' bamboo shoots!</h2><p>Panda fact: '+F[Math.floor(Math.random()*F.length)]+'</p>';G.textContent='Play again';G.disabled=false;}
+G.onclick=function(){items=[];score=0;t=0;px=W/2;S.textContent='Score 0';FC.hidden=true;run=true;G.disabled=true;last=performance.now();requestAnimationFrame(loop);};
+addEventListener('keydown',function(e){if(!run)return;if(e.key=='ArrowLeft'||e.key=='a'){keys.l=1;e.preventDefault()}if(e.key=='ArrowRight'||e.key=='d'){keys.r=1;e.preventDefault()}});
+addEventListener('keyup',function(e){if(e.key=='ArrowLeft'||e.key=='a')keys.l=0;if(e.key=='ArrowRight'||e.key=='d')keys.r=0});
+function mv(e){var r=c.getBoundingClientRect();px=(e.clientX-r.left)*W/r.width;}c.addEventListener('pointerdown',mv);c.addEventListener('pointermove',function(e){if(e.buttons||e.pointerType!='mouse')mv(e)});draw();})();
+</script>
+
+<section class="card related"><h2>Related guides</h2><ul><li><a href="../../diet.html">Panda diet: what pandas eat</a></li><li><a href="../../giant-panda.html">Giant panda facts</a></li><li><a href="../../games/">Panda games</a></li></ul></section>
+<section class="card sources"><h2>Sources</h2><ol><li><a href="https://nationalzoo.si.edu/animals/giant-panda" rel="noopener">Smithsonian&#x27;s National Zoo and Conservation Biology Institute: Giant panda</a></li><li><a href="https://www.worldwildlife.org/species/giant-panda" rel="noopener">WWF: Giant panda</a></li><li><a href="https://www.science.org/doi/10.1126/science.aab2413" rel="noopener">Nie et al. (2015), Exceptionally low daily energy expenditure in the bamboo eating giant panda, Science</a></li></ol></section>
+</main>
+<footer><section class="contact-us" aria-labelledby="contact-us-h"><h2 id="contact-us-h">Contact us</h2><p>Questions, corrections or suggestions? Email <a href="mailto:joshuaofisrael@gmail.com">joshuaofisrael@gmail.com</a> or use our <a href="../../contact.html">contact form</a>.</p></section>
+<p class="op">&copy; 2026 Joshua Israel Ventures LLC. All rights reserved. PandasWise is owned and operated by Joshua Israel Ventures LLC.</p><p class="flinks"><a href="../../terms.html">Terms</a> &middot; <a href="../../privacy.html">Privacy</a> &middot; <a href="../../disclaimer.html">Disclaimer</a> &middot; <a href="../../contact.html">Contact</a> &middot; <a href="../../about.html">About</a> &middot; <a href="../../blog/">Blog</a></p><p>PandasWise: original educational content about giant pandas and red pandas. All text and illustrations are original. Photos are credited on our <a href="../../credits/">photo credits</a> page.</p></footer>
+</body></html>

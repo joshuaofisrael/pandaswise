@@ -26,7 +26,7 @@ NAV = [("index", "Home"), ("where-to-see-pandas", "Where to See Pandas"), ("gian
        ("red-panda", "Red Panda"), ("diet", "Diet"), ("behavior", "Behavior"), ("habitat", "Habitat"),
        ("conservation", "Conservation"),
        ("giant-vs-red-panda", "Giant vs Red"), ("faq", "FAQ"), ("glossary", "Glossary"),
-       ("blog/index", "Blog")]
+       ("blog/index", "Blog"), ("games/index", "Games")]
 
 LOGO = ('<svg role="img" width="36" height="36" viewBox="0 0 64 64" aria-labelledby="logo-t">'
         '<title id="logo-t">PandasWise logo</title>'
@@ -266,6 +266,7 @@ def build():
          "", "## Guides"] + [item(s) for s in guides] + [
          "", "## Tools",
          item("where-to-see-pandas"),
+         item("games/index"), item("games/bamboo-breakfast/index"), item("games/which-panda-is-it/index"),
          f"  - Sections: [Giant pandas by country]({w}#outside-china), [Giant pandas in China]({w}#china), "
          f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [
