@@ -266,7 +266,7 @@ def build():
          "", "## Guides"] + [item(s) for s in guides] + [
          "", "## Tools",
          item("where-to-see-pandas"),
-         item("games/index"), item("games/bamboo-breakfast/index"), item("games/which-panda-is-it/index"), item("teachers/index"), item("research/index"),
+         item("games/index"), item("games/bamboo-breakfast/index"), item("games/which-panda-is-it/index"), item("teachers/index"), item("researchers/index"),
          f"  - Sections: [Giant pandas by country]({w}#outside-china), [Giant pandas in China]({w}#china), "
          f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [

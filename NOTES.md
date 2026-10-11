@@ -76,3 +76,6 @@ IndexNow key file at the site root (/pandaswise/<key>.txt), indexnow.sh.
 
 ## Games hub (11 Oct 2026, 00:25 slot)
 - /games/ hub, /games/bamboo-breakfast/ (canvas catch game) and /games/which-panda-is-it/ (giant, red or both sorting quiz). Original code and art, no sound, localStorage best scores only, VideoGame JSON-LD with LLC publisher, facts from existing SOURCES. USPTO check: no marks for BAMBOO BREAKFAST or WHICH PANDA. Credits in games/CREDITS.md. Nav item Games and a home hero button added. Still open: teachers hub (EDU brief).
+
+## Teachers hub and research page (11 Oct 2026, 09:25 slot)
+- /teachers/ (lesson ideas K to 2, 3 to 5, 6 to 8, 9 to 12 with NGSS codes, quiz plus answer key, vocabulary, games as activities) and /research/ (4 papers, DOIs checked via doi.org 11 Oct). Commit 2cd56a4. Still open: Cite this page box, last reviewed dates, PDF printables, LearningResource JSON-LD, outreach plan and template draft for Personal assistant.
