@@ -22,3 +22,4 @@ FormSubmit 12:28 BST: one activation test POST from pandaswise.com origin: HTTP 
 Redesign + legal 14:30 BST: light cute redesign and Terms, Disclaimer, Privacy (LLC, governing law) live, all 200. IndexNow 24 URLs: HTTP 200.
 LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt updated.
 - 2026-10-11 00:3x: games hub launched (3 new URLs); IndexNow pinged.
+- 2026-10-12 00:37: Published daily fact article /blog/do-pandas-have-thumbs.html (FAQPage JSON-LD, 3 verified DOIs, internal links); IndexNow HTTP 200 for article, blog index, sitemap. Next slot: Cite this page box plus last reviewed dates (EDU step 1).
