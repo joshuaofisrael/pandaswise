@@ -250,7 +250,7 @@ def build():
     # robots
     bots = ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "GPTBot", "PerplexityBot", "Perplexity-User",
             "ClaudeBot", "Claude-SearchBot", "Claude-User", "Google-Extended", "Applebot", "Applebot-Extended",
-            "DuckAssistBot", "Amazonbot"]
+            "DuckAssistBot", "Amazonbot", "anthropic-ai", "CCBot", "Bytespider", "Meta-ExternalAgent", "cohere-ai"]
     rb = ["User-agent: *", "Allow: /", ""] + sum([[f"User-agent: {b}", "Allow: /", ""] for b in bots], [])
     rb.append(f"Sitemap: {BASE_URL}sitemap.xml")
     open(os.path.join(ROOT, "robots.txt"), "w").write("\n".join(rb) + "\n")
