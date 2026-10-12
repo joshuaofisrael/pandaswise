@@ -66,6 +66,9 @@ SOURCES = {
  "psu-bamboo": ("Penn State University: Peace and bamboo (research story on pandas and bamboo die off)", "https://www.psu.edu/news/research/story/peace-and-bamboo"),
  "jabs": ("Journal of the American Bamboo Society, vol. 4 (PDF): bamboo flowering and giant panda starvation in the Min Shan, 1974 to 1976", "https://bamboo.org/_uploads/pdfs/JABSv04.pdf"),
  "rpn-eco": ("Red Panda Network: Ecotrip FAQs", "https://redpandanetwork.org/ecotrip-faqs"),
+ "bista2022esr": ("Bista et al. (2022), Space use, interaction and recursion in a solitary specialized herbivore: a red panda case study, Endangered Species Research 47: 131 to 143. DOI 10.3354/esr01171", "https://doi.org/10.3354/esr01171"),
+ "bista2022le": ("Bista et al. (2022), Effect of disturbances and habitat fragmentation on an arboreal habitat specialist mammal using GPS telemetry: a case of the red panda, Landscape Ecology 37: 795 to 809. DOI 10.1007/s10980-021-01357-w", "https://doi.org/10.1007/s10980-021-01357-w"),
+ "panthi2017": ("Panthi et al. (2017), Large anthropogenic impacts on a charismatic small carnivore: Insights from distribution surveys of red panda Ailurus fulgens in Nepal, PLOS ONE. DOI 10.1371/journal.pone.0180978", "https://doi.org/10.1371/journal.pone.0180978"),
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
 }
 
