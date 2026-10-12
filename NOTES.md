@@ -79,3 +79,6 @@ IndexNow key file at the site root (/pandaswise/<key>.txt), indexnow.sh.
 
 ## Teachers hub and research page (11 Oct 2026, 09:25 slot)
 - /teachers/ (lesson ideas K to 2, 3 to 5, 6 to 8, 9 to 12 with NGSS codes, quiz plus answer key, vocabulary, games as activities) and /research/ (4 papers, DOIs checked via doi.org 11 Oct). Commit 2cd56a4. Still open: Cite this page box, last reviewed dates, PDF printables, LearningResource JSON-LD, outreach plan and template draft for Personal assistant.
+
+## Cloudflare beacon blocked (12 Oct 2026, 09:25 slot)
+- Rechecked 09:31 BST: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ANALYTICS_TOKEN are the same token (id 2b95a241...), valid and active, but the RUM site_info API on account 8cd83313cf8eab3f126fdc1ce82c76f9 returns "Authentication error" (code 10000). Needs Account > Account Analytics: Edit (Web Analytics) permission. Reported to Personal assistant once on 12 Oct; skip item 2 in later slots until a working token or site tag arrives.
