@@ -111,6 +111,27 @@ def ld(obj):
 def fmt_date(d):
     return datetime.date.fromisoformat(d).strftime("%-d %B %Y")
 
+def fmt_mla_date(d):
+    return datetime.date.fromisoformat(d).strftime("%-d %b. %Y")
+
+def cite_box(p, canon):
+    """APA, MLA and Chicago cite strings for fact articles and pillars."""
+    h1 = p["h1"]
+    year = p["published"][:4]
+    apa_date = datetime.date.fromisoformat(p["published"]).strftime("%Y, %B %-d")
+    mla_date = fmt_mla_date(p["published"])
+    chi_date = datetime.date.fromisoformat(p["published"]).strftime("%B %-d, %Y")
+    end = "" if h1.rstrip().endswith(("?", "!")) else "."
+    apa = f"{SITE}. ({apa_date}). {h1}{end} {canon}"
+    mla = f'"{h1}{end}" {SITE}, {mla_date}, {canon}.'
+    chicago = f'{SITE}. "{h1}{end}" {SITE}. {chi_date}. {canon}.'
+    return (
+        '<section class="card cite" id="cite"><h2>Cite this page</h2>'
+        f'<p><strong>APA</strong><br>{esc(apa)}</p>'
+        f'<p><strong>MLA</strong><br>{esc(mla)}</p>'
+        f'<p><strong>Chicago</strong><br>{esc(chicago)}</p></section>'
+    )
+
 def render(p, pages):
     slug, depth = p["slug"], p["slug"].count("/")
     R = "../" * depth
@@ -155,8 +176,16 @@ def render(p, pages):
                         "author": ORG, "publisher": ORG, "mainEntityOfPage": canon,
                         "inLanguage": "en"}))
     elif p["kind"] == "page":
-        head.append(ld({"@type": p.get("schema", "WebPage"), "name": p["h1"], "url": canon,
-                        "description": desc, "publisher": ORG}))
+        page_ld = {"@type": p.get("schema", "WebPage"), "name": p["h1"], "url": canon,
+                   "description": desc, "publisher": ORG}
+        if p.get("educationalLevel"):
+            page_ld["educationalLevel"] = p["educationalLevel"]
+        if p.get("learningResourceType"):
+            page_ld["learningResourceType"] = p["learningResourceType"]
+        if p.get("schema") == "LearningResource":
+            page_ld["isAccessibleForFree"] = True
+            page_ld["inLanguage"] = "en"
+        head.append(ld(page_ld))
     if p.get("faq"):
         head.append(ld({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer",
@@ -184,7 +213,8 @@ def render(p, pages):
         out.append(f'<h1>{esc(p["h1"])}</h1>')
         if p["kind"] in ("pillar", "post"):
             pub = fmt_date(p["published"]); mod = fmt_date(p["modified"])
-            line = f'Published {pub} &middot; Last updated {mod}'
+            rev = fmt_date(p.get("reviewed", p["modified"]))
+            line = f'Published {pub} &middot; Last updated {mod} &middot; Last reviewed {rev}'
             out.append(f'<p class="meta">{line} &middot; By the {SITE} team</p>')
     if p["kind"] == "blog_index":
         posts = sorted([q for q in pages.values() if q["kind"] == "post"],
@@ -208,6 +238,8 @@ def render(p, pages):
     if p.get("sources"):
         out.append('<section class="card sources"><h2>Sources</h2><ol>' + "".join(
             f'<li><a href="{esc(u)}" rel="noopener">{esc(n)}</a></li>' for n, u in p["sources"]) + "</ol></section>")
+    if p["kind"] in ("pillar", "post"):
+        out.append(cite_box(p, canon))
     out.append("</main>")
     out.append(f'<footer><section class="contact-us" aria-labelledby="contact-us-h"><h2 id="contact-us-h">Contact us</h2>'
                f'<p>Questions, corrections or suggestions? Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> '
