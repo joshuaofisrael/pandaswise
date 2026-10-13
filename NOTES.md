@@ -82,3 +82,6 @@ IndexNow key file at the site root (/pandaswise/<key>.txt), indexnow.sh.
 
 ## Cloudflare beacon blocked (12 Oct 2026, 09:25 slot)
 - Rechecked 09:31 BST: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ANALYTICS_TOKEN are the same token (id 2b95a241...), valid and active, but the RUM site_info API on account 8cd83313cf8eab3f126fdc1ce82c76f9 returns "Authentication error" (code 10000). Needs Account > Account Analytics: Edit (Web Analytics) permission. Reported to Personal assistant once on 12 Oct; skip item 2 in later slots until a working token or site tag arrives.
+
+## PDF printables (13 Oct 2026, 09:25 slot)
+- Three original worksheets in /teachers/printables/: panda-quiz.pdf (5 questions plus answer key, IUCN and Caro 2017), giant-vs-red-panda-chart.pdf (blank comparison chart, NGSS 4 LS1 1), panda-vocabulary-match.pdf (10 glossary words plus key). Rendered with headless Chrome from drafts/printables/*.html (gitignored sources). Linked from a new Printables section on /teachers/. EDU step 1 is now complete; next slot moves to item 4 (outreach plan).
