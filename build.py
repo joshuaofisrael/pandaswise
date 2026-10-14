@@ -72,6 +72,8 @@ SOURCES = {
  "lismith2020": ("Li, P. and Smith, K. K. (2020), Comparative skeletal anatomy of neonatal ursids and the extreme altriciality of the giant panda, Journal of Anatomy 236(4): 724 to 736. DOI 10.1111/joa.13127", "https://doi.org/10.1111/joa.13127"),
  "zhu2001": ("Zhu, X., Lindburg, D. G., Pan, W., Forney, K. A. and Wang, D. (2001), The reproductive strategy of giant pandas (Ailuropoda melanoleuca): infant growth and development and mother infant relationships, Journal of Zoology 253(2): 141 to 155. DOI 10.1017/S0952836901000139", "https://doi.org/10.1017/S0952836901000139"),
  "spady2007": ("Spady, T. J., Lindburg, D. G. and Durrant, B. S. (2007), Evolution of reproductive seasonality in bears, Mammal Review 37(1): 21 to 53. DOI 10.1111/j.1365-2907.2007.00096.x", "https://doi.org/10.1111/j.1365-2907.2007.00096.x"),
+ "fei2017": ("Fei, Y., Hou, R., Spotila, J. R., Paladino, F. V., Qi, D. and Zhang, Z. (2017), Metabolic rate of the red panda, Ailurus fulgens, a dietary bamboo specialist, PLOS ONE 12(3): e0173274. DOI 10.1371/journal.pone.0173274", "https://doi.org/10.1371/journal.pone.0173274"),
+ "mcnab1988": ("McNab, B. K. (1988), Energy conservation in a tree kangaroo (Dendrolagus matschiei) and the red panda (Ailurus fulgens), Physiological Zoology 61(3): 280 to 292. DOI 10.1086/physzool.61.3.30161241", "https://doi.org/10.1086/physzool.61.3.30161241"),
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
 }
 
