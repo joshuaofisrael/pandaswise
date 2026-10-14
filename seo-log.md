@@ -25,3 +25,4 @@ LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt u
 - 2026-10-12 00:37: Published daily fact article /blog/do-pandas-have-thumbs.html (FAQPage JSON-LD, 3 verified DOIs, internal links); IndexNow HTTP 200 for article, blog index, sitemap. Next slot: Cite this page box plus last reviewed dates (EDU step 1).
 - 2026-10-13 00:3x: Published daily fact article /blog/how-big-is-a-red-panda-home-range.html (FAQPage JSON-LD, 3 verified DOIs: 10.3354/esr01171, 10.1007/s10980-021-01357-w, 10.1371/journal.pone.0180978; IndexNow HTTP 200). Also shipped Cite this page (APA/MLA/Chicago) and Last reviewed on pillars and posts; LearningResource JSON-LD on /teachers/. Next: PDF printables.
 - 13 Oct 2026 09:34 BST: IndexNow HTTP 200 for /teachers/ and 3 new printable PDFs.
+- 2026-10-14 09:37 London: published daily fact /blog/why-are-baby-pandas-so-small.html (09:25 slot, 00:25 slot had failed); IndexNow HTTP 200 for article, blog index, sitemap.
