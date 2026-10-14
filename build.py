@@ -69,6 +69,9 @@ SOURCES = {
  "bista2022esr": ("Bista et al. (2022), Space use, interaction and recursion in a solitary specialized herbivore: a red panda case study, Endangered Species Research 47: 131 to 143. DOI 10.3354/esr01171", "https://doi.org/10.3354/esr01171"),
  "bista2022le": ("Bista et al. (2022), Effect of disturbances and habitat fragmentation on an arboreal habitat specialist mammal using GPS telemetry: a case of the red panda, Landscape Ecology 37: 795 to 809. DOI 10.1007/s10980-021-01357-w", "https://doi.org/10.1007/s10980-021-01357-w"),
  "panthi2017": ("Panthi et al. (2017), Large anthropogenic impacts on a charismatic small carnivore: Insights from distribution surveys of red panda Ailurus fulgens in Nepal, PLOS ONE. DOI 10.1371/journal.pone.0180978", "https://doi.org/10.1371/journal.pone.0180978"),
+ "lismith2020": ("Li, P. and Smith, K. K. (2020), Comparative skeletal anatomy of neonatal ursids and the extreme altriciality of the giant panda, Journal of Anatomy 236(4): 724 to 736. DOI 10.1111/joa.13127", "https://doi.org/10.1111/joa.13127"),
+ "zhu2001": ("Zhu, X., Lindburg, D. G., Pan, W., Forney, K. A. and Wang, D. (2001), The reproductive strategy of giant pandas (Ailuropoda melanoleuca): infant growth and development and mother infant relationships, Journal of Zoology 253(2): 141 to 155. DOI 10.1017/S0952836901000139", "https://doi.org/10.1017/S0952836901000139"),
+ "spady2007": ("Spady, T. J., Lindburg, D. G. and Durrant, B. S. (2007), Evolution of reproductive seasonality in bears, Mammal Review 37(1): 21 to 53. DOI 10.1111/j.1365-2907.2007.00096.x", "https://doi.org/10.1111/j.1365-2907.2007.00096.x"),
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
 }
 
