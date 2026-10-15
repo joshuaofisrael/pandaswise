@@ -74,6 +74,10 @@ SOURCES = {
  "spady2007": ("Spady, T. J., Lindburg, D. G. and Durrant, B. S. (2007), Evolution of reproductive seasonality in bears, Mammal Review 37(1): 21 to 53. DOI 10.1111/j.1365-2907.2007.00096.x", "https://doi.org/10.1111/j.1365-2907.2007.00096.x"),
  "fei2017": ("Fei, Y., Hou, R., Spotila, J. R., Paladino, F. V., Qi, D. and Zhang, Z. (2017), Metabolic rate of the red panda, Ailurus fulgens, a dietary bamboo specialist, PLOS ONE 12(3): e0173274. DOI 10.1371/journal.pone.0173274", "https://doi.org/10.1371/journal.pone.0173274"),
  "mcnab1988": ("McNab, B. K. (1988), Energy conservation in a tree kangaroo (Dendrolagus matschiei) and the red panda (Ailurus fulgens), Physiological Zoology 61(3): 280 to 292. DOI 10.1086/physzool.61.3.30161241", "https://doi.org/10.1086/physzool.61.3.30161241"),
+ "zhang2009": ("Zhang, H., Li, D., Wang, C. and Hull, V. (2009), Delayed implantation in giant pandas: the first comprehensive empirical evidence, Reproduction 138(6): 979 to 986. DOI 10.1530/rep-09-0241", "https://doi.org/10.1530/rep-09-0241"),
+ "wauters2023": ("Wauters, J., Wilson, K. S., Cools, T., Vancsok, C., Bouts, T., Mulot, B., Leclerc, A., Haapakoski, M. et al. (2023), Pregnancy length and health in giant pandas: What can metabolic and urinary endocrine markers unveil?, Theriogenology Wild 3: 100063. DOI 10.1016/j.therwi.2023.100063", "https://doi.org/10.1016/j.therwi.2023.100063"),
+ "cools2025": ("Cools, T., Wilson, K. S., Li, D., Vancsok, C., Mulot, B., Leclerc, A. et al. (2025), Non-invasive giant panda pregnancy and pseudopregnancy biomonitoring by integrated metabolomics and steroidomics, Scientific Reports. DOI 10.1038/s41598-025-19067-7", "https://doi.org/10.1038/s41598-025-19067-7"),
+ "luo2025": ("Luo, Y., Yang, Z., Zhou, X., Li, D., Lai, L., Zeng, C. et al. (2025), Exploring Captive Giant Panda Reproduction: Maternal and Offspring Factor Correlations from 324 Breeding Events, Animals 15(8): 1182. DOI 10.3390/ani15081182", "https://doi.org/10.3390/ani15081182"),
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
 }
 
