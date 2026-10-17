@@ -36,6 +36,7 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 - [Why are baby pandas so small?](https://pandaswise.com/blog/why-are-baby-pandas-so-small.html): A newborn giant panda weighs about 3 to 5 ounces, roughly 1/900th of its mother. Skeletal scans suggest a short gestation after implantation explains why.
 - [Why are giant pandas black and white?](https://pandaswise.com/blog/why-are-pandas-black-and-white.html): Why giant pandas are black and white: the leading study points to snow and shade camouflage for the body and signalling for the ears and eye patches.
 - [Why are red pandas red?](https://pandaswise.com/blog/why-are-red-pandas-red.html): Red pandas are red because the russet coat blends with reddish brown moss and white lichen in their forest canopy. How the coat, mask, belly and tail work.
+- [Why do giant pandas eat bamboo if they are carnivores?](https://pandaswise.com/blog/why-do-pandas-eat-bamboo-if-they-are-carnivores.html): Giant pandas belong to the order Carnivora yet live on bamboo. What genome, taste gene, gut microbe and energy studies reveal about this unusual diet.
 
 ## Optional
 - [About PandasWise](https://pandaswise.com/about.html): Who runs PandasWise, what it covers, how pages are researched and sourced, how we keep the zoo list current, and how to report a correction.
