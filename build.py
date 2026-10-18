@@ -82,6 +82,9 @@ SOURCES = {
  "cools2025": ("Cools, T., Wilson, K. S., Li, D., Vancsok, C., Mulot, B., Leclerc, A. et al. (2025), Non-invasive giant panda pregnancy and pseudopregnancy biomonitoring by integrated metabolomics and steroidomics, Scientific Reports. DOI 10.1038/s41598-025-19067-7", "https://doi.org/10.1038/s41598-025-19067-7"),
  "luo2025": ("Luo, Y., Yang, Z., Zhou, X., Li, D., Lai, L., Zeng, C. et al. (2025), Exploring Captive Giant Panda Reproduction: Maternal and Offspring Factor Correlations from 324 Breeding Events, Animals 15(8): 1182. DOI 10.3390/ani15081182", "https://doi.org/10.3390/ani15081182"),
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
+ "reid1991": ("Reid, D. G., Hu, J. and Huang, Y. (1991), Ecology of the red panda Ailurus fulgens in the Wolong Reserve, China, Journal of Zoology 225(3): 347 to 364. DOI 10.1111/j.1469-7998.1991.tb03821.x", "https://doi.org/10.1111/j.1469-7998.1991.tb03821.x"),
+ "bugler2023": ("Bugler, K., Ross, J. and Paterson, A. (2023), Activity patterns of captive red panda (Ailurus fulgens), Animals 13(5): 846. DOI 10.3390/ani13050846", "https://doi.org/10.3390/ani13050846"),
+ "johnson1988": ("Johnson, K. G., Schaller, G. B. and Hu, J. (1988), Comparative behavior of red and giant pandas in the Wolong Reserve, China, Journal of Mammalogy 69(3): 552 to 564. DOI 10.2307/1381347", "https://doi.org/10.2307/1381347"),
 }
 
 ORG = {"@type": "Organization", "@id": BASE_URL + "#organization", "name": LEGAL, "legalName": LEGAL,
