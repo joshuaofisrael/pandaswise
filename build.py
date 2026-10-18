@@ -14,7 +14,7 @@ BASE_URL = "https://pandaswise.com/"   # <- the ONE line to change for a custom 
 SITE = "PandasWise"
 LEGAL = "Joshua Israel Ventures LLC"
 GSC_TOKEN = ""        # Google Search Console HTML tag token (content="...") once Joshua adds the property
-CF_BEACON_TOKEN = ""  # Cloudflare Web Analytics beacon token, once a site exists for this hostname
+CF_BEACON_TOKEN = "5291cdd89aa34aebb1c001ba61b8a0e0"  # Cloudflare Web Analytics beacon token, once a site exists for this hostname
 CONTACT_EMAIL = "joshuaofisrael@gmail.com"  # FormSubmit endpoint owner (shared JI Ventures inbox)
 ROOT = os.path.dirname(os.path.abspath(__file__))
 INDEXNOW_KEY = open(os.path.join(ROOT, ".indexnow_key")).read().strip()
@@ -216,8 +216,8 @@ def render(p, pages):
             for i, (n, s) in enumerate(crumbs)) + "</nav>")
     body = p["body"].replace("@/", R)
     body = body.replace("{{ANALYTICS}}", (
-        "We use Cloudflare Web Analytics to count page views. It does not use cookies or local storage and does not "
-        "collect personal data to track you across sites; it records anonymous information such as the page visited, "
+        "PandasWise uses cookieless Cloudflare Web Analytics to count page views. It does not use cookies or local storage and does not "
+        "collect personal data to track you across sites. It records anonymous information such as the page visited, "
         "referrer, browser type and country.") if CF_BEACON_TOKEN else (
         "PandasWise does not currently run any analytics. We may add Cloudflare Web Analytics, which does not use cookies; "
         "if we do, we will update this policy before it goes live."))
