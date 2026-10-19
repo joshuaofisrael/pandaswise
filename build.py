@@ -84,6 +84,10 @@ SOURCES = {
  "darjeeling": ("Padmaja Naidu Himalayan Zoological Park, Darjeeling (official site)", "https://www.darjeelingzoo.in/"),
  "reid1991": ("Reid, D. G., Hu, J. and Huang, Y. (1991), Ecology of the red panda Ailurus fulgens in the Wolong Reserve, China, Journal of Zoology 225(3): 347 to 364. DOI 10.1111/j.1469-7998.1991.tb03821.x", "https://doi.org/10.1111/j.1469-7998.1991.tb03821.x"),
  "bugler2023": ("Bugler, K., Ross, J. and Paterson, A. (2023), Activity patterns of captive red panda (Ailurus fulgens), Animals 13(5): 846. DOI 10.3390/ani13050846", "https://doi.org/10.3390/ani13050846"),
+ "white2002": ("White, A. M., Swaisgood, R. R. and Zhang, H. (2002), The highs and lows of chemical communication in giant pandas (Ailuropoda melanoleuca): effect of scent deposition height on signal discrimination, Behavioral Ecology and Sociobiology 51: 519 to 529. DOI 10.1007/s00265-002-0473-3", "https://doi.org/10.1007/s00265-002-0473-3"),
+ "swaisgood1999": ("Swaisgood, R. R., Lindburg, D. G. and Zhou, X. (1999), Giant pandas discriminate individual differences in conspecific scent, Animal Behaviour 57: 1045 to 1053. DOI 10.1006/anbe.1998.1070", "https://doi.org/10.1006/anbe.1998.1070"),
+ "charlton2009": ("Charlton, B. D., Zhang, Z. and Snyder, R. J. (2009), The information content of giant panda, Ailuropoda melanoleuca, bleats: acoustic cues to sex, age and size, Animal Behaviour 78: 893 to 898. DOI 10.1016/j.anbehav.2009.06.029", "https://doi.org/10.1016/j.anbehav.2009.06.029"),
+ "charlton2010": ("Charlton, B. D., Keating, J. L., Kersey, D., Rengui, L. et al. (2011), Vocal cues to male androgen levels in giant pandas, Biology Letters 7(1): 71 to 74. DOI 10.1098/rsbl.2010.0582", "https://doi.org/10.1098/rsbl.2010.0582"),
  "johnson1988": ("Johnson, K. G., Schaller, G. B. and Hu, J. (1988), Comparative behavior of red and giant pandas in the Wolong Reserve, China, Journal of Mammalogy 69(3): 552 to 564. DOI 10.2307/1381347", "https://doi.org/10.2307/1381347"),
 }
 
