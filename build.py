@@ -159,6 +159,7 @@ def render(p, pages):
     canon = url_for(slug)
     title = p["title"]; desc = p["description"]
     head = ['<!doctype html><html lang="en"><head><meta charset="utf-8">',
+            '<meta name="google-site-verification" content="SlAoHf98mQg1jLj8BBYeGs96y_9dN3978x2ziFQL58k" /><meta name="msvalidate.01" content="942EB99DB458637348E2ADBDEBDAA7AE" />',
             '<meta name="viewport" content="width=device-width,initial-scale=1">']
     if slug == "index" and GSC_TOKEN:
         head.append(f'<meta name="google-site-verification" content="{esc(GSC_TOKEN)}">')
