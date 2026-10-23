@@ -57,3 +57,14 @@ figure.photo{max-width:640px}figure img{display:block;width:100%;height:auto;bor
 .photo-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.2rem 0}.photo-strip figure{margin:0}.photo-strip img{aspect-ratio:4/3;object-fit:cover}
 :focus-visible{outline:3px solid var(--neon-cyan)}
 @media(prefers-reduced-motion:reduce){.tile:hover{box-shadow:none}}
+/* 23 Oct 2026 photo polish */
+.photo-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.2rem 0}.photo-pair figure,.photo-pair.big figure{margin:0;background:#fff;border-radius:22px;padding:.5rem;box-shadow:0 0 0 2px rgba(47,243,255,.6),0 0 22px rgba(255,47,179,.25)}.photo-pair img{aspect-ratio:16/10;object-fit:cover}
+.photo-pair.big{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.photo-pair.big img{aspect-ratio:16/9}
+figure.photo.wide{max-width:100%}figure.photo.wide img{aspect-ratio:16/9;object-fit:cover}
+figure.ai figcaption::before{content:"AI generated";display:inline-block;margin-right:.45rem;padding:.05rem .5rem;border-radius:999px;background:#3a1163;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.02em}
+figure img{background:linear-gradient(135deg,#ffe6f6,#e6fbff)}
+figure.photo,.photo-strip figure,.photo-pair figure{transition:transform .2s,box-shadow .2s}
+figure.photo:hover,.photo-strip figure:hover,.photo-pair figure:hover{transform:translateY(-3px);box-shadow:0 0 0 2px var(--neon-cyan),0 0 26px rgba(255,47,179,.4)}
+main h2{position:relative}main>h2::after,main>section>h2::after{content:"";display:block;width:64px;height:4px;margin-top:.35rem;border-radius:4px;background:linear-gradient(90deg,var(--neon-pink),var(--neon-cyan))}
+.tile{border-top:4px solid var(--neon-pink)}.tile.redp{border-top-color:var(--neon-cyan)}
+@media(prefers-reduced-motion:reduce){figure.photo,.photo-strip figure,.photo-pair figure{transition:none}figure.photo:hover,.photo-strip figure:hover,.photo-pair figure:hover{transform:none}}
