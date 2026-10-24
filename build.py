@@ -98,7 +98,7 @@ SOURCES = {
  "johnson1988": ("Johnson, K. G., Schaller, G. B. and Hu, J. (1988), Comparative behavior of red and giant pandas in the Wolong Reserve, China, Journal of Mammalogy 69(3): 552 to 564. DOI 10.2307/1381347", "https://doi.org/10.2307/1381347"),
 }
 
-ORG = {"@type": "Organization", "@id": BASE_URL + "#organization", "name": LEGAL, "legalName": LEGAL,
+ORG = {"@type": "Organization", "@id": BASE_URL + "#organization", "name": SITE,
        "url": BASE_URL, "logo": BASE_URL + "logo.png", "email": "joshuaofisrael@gmail.com",
        "brand": {"@type": "Brand", "name": SITE, "url": BASE_URL, "logo": BASE_URL + "logo.png"}}
 
@@ -270,10 +270,10 @@ def render(p, pages):
         out.append(cite_box(p, canon))
     out.append("</main>")
     out.append(f'<footer><section class="contact-us" aria-labelledby="contact-us-h"><h2 id="contact-us-h">Contact us</h2>'
-               f'<p>Questions, corrections or suggestions? Email <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> '
-               f'or use our <a href="{rel_href("contact", depth)}">contact form</a>.</p></section>')
-    out.append(f'<p class="op">&copy; 2026 {LEGAL}. All rights reserved. {SITE} is owned and operated by {LEGAL}.</p>'
-               f'<p class="flinks"><a href="{rel_href("terms", depth)}">Terms</a> &middot; <a href="{rel_href("privacy", depth)}">Privacy</a>'
+               f'<p>Questions, corrections or suggestions? Please use our <a href="{rel_href("contact", depth)}">contact form</a>.</p></section>')
+    legal_line = (f'<p class="op">&copy; 2026 {LEGAL}. All rights reserved. {SITE} is a trade name of {LEGAL}, a Florida limited liability company.</p>'
+                  if p.get("slug") in ("terms", "privacy", "disclaimer") else "")
+    out.append(legal_line + f'<p class="flinks"><a href="{rel_href("terms", depth)}">Terms</a> &middot; <a href="{rel_href("privacy", depth)}">Privacy</a>'
                f' &middot; <a href="{rel_href("disclaimer", depth)}">Disclaimer</a> &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
                f' &middot; <a href="{rel_href("about", depth)}">About</a> &middot; <a href="{rel_href("blog/index", depth)}">Blog</a></p>'
                f'<p>{SITE}: original educational content about giant pandas and red pandas. All text is original. Real photos and AI generated images (always labelled) are credited on our <a href="{R}credits/">photo credits</a> page.</p></footer>')
@@ -326,7 +326,7 @@ def build():
          f"> {SITE} is a free, original educational website about giant pandas (Ailuropoda melanoleuca) and red pandas "
          "(Ailurus). It explains panda biology, diet, behavior, habitat, conservation status and how the two species differ, "
          "and keeps a verified, country by country list of zoos and reserves where giant pandas and red pandas can be seen, each entry checked against an official page with a last verified date. "
-         f"{SITE} is a brand owned and operated by {LEGAL}.", "",
+         "", 
          "Content is general education written from cited sources (IUCN, WWF, Smithsonian's National Zoo, San Diego Zoo "
          "Wildlife Alliance, peer reviewed studies and official zoo announcements). Zoo details change; check with the zoo before visiting.",
          "", "## Guides"] + [item(s) for s in guides] + [
