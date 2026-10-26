@@ -96,6 +96,8 @@ SOURCES = {
  "charlton2009": ("Charlton, B. D., Zhang, Z. and Snyder, R. J. (2009), The information content of giant panda, Ailuropoda melanoleuca, bleats: acoustic cues to sex, age and size, Animal Behaviour 78: 893 to 898. DOI 10.1016/j.anbehav.2009.06.029", "https://doi.org/10.1016/j.anbehav.2009.06.029"),
  "charlton2010": ("Charlton, B. D., Keating, J. L., Kersey, D., Rengui, L. et al. (2011), Vocal cues to male androgen levels in giant pandas, Biology Letters 7(1): 71 to 74. DOI 10.1098/rsbl.2010.0582", "https://doi.org/10.1098/rsbl.2010.0582"),
  "johnson1988": ("Johnson, K. G., Schaller, G. B. and Hu, J. (1988), Comparative behavior of red and giant pandas in the Wolong Reserve, China, Journal of Mammalogy 69(3): 552 to 564. DOI 10.2307/1381347", "https://doi.org/10.2307/1381347"),
+ "zhang2015": ("Zhang, J., Hull, V., Huang, J., Zhou, S., Xu, W., Yang, H. et al. (2015), Activity patterns of the giant panda (Ailuropoda melanoleuca), Journal of Mammalogy 96(6): 1116 to 1127. DOI 10.1093/jmammal/gyv118", "https://doi.org/10.1093/jmammal/gyv118"),
+ "zhang2018": ("Zhang, M., Zhang, Z., Li, Z., Hong, M., Zhou, X., Zhou, S. et al. (2018), Giant panda foraging and movement patterns in response to bamboo shoot growth, Environmental Science and Pollution Research 25(9): 8636 to 8643. DOI 10.1007/s11356-017-0919-9", "https://doi.org/10.1007/s11356-017-0919-9"),
 }
 
 ORG = {"@type": "Organization", "@id": BASE_URL + "#organization", "name": SITE,
