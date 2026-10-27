@@ -7,6 +7,10 @@ BASE=$(python3 -c 'import re;print(re.search(r"^BASE_URL = \"([^\"]+)\"",open("b
 KEY=$(cat .indexnow_key)
 HOST=$(echo "$BASE" | sed -E 's#^https?://([^/]+).*#\1#')
 if [ $# -eq 0 ]; then set -- $(curl -s "${BASE}sitemap.xml" | grep -o '<loc>[^<]*' | sed 's/<loc>//'); fi
+# Legal hold gate: drop any URL whose page is held (HOLD_REVIEW) before it is submitted.
+FILTERED=$(printf '%s\n' "$@" | python3 legal_gate.py --filter-urls) || { echo "legal gate failed; IndexNow not pinged"; exit 1; }
+set -- $FILTERED
+if [ $# -eq 0 ]; then echo "IndexNow: no publishable URLs after legal gate"; exit 0; fi
 LIST=$(printf '%s\n' "$@" | python3 -c 'import sys,json;print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')
 curl -s -o /dev/null -w "IndexNow HTTP %{http_code} ($# URLs)\n" -X POST https://api.indexnow.org/indexnow \
   -H 'Content-Type: application/json; charset=utf-8' \

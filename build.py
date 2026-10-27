@@ -7,7 +7,8 @@ Renders content/*.html fragments into static HTML at the repo root (GitHub Pages
 To move to a custom domain later: change BASE_URL below (one line), add a CNAME file
 containing the bare domain, run `python3 build.py`, commit and push, then ping IndexNow.
 """
-import json, os, re, html, glob, datetime
+import json, os, re, html, glob, datetime, subprocess, sys
+import legal_gate  # pre-publish legal-hold gate (Joshua's rule, /workspace/content-review/RULE.md)
 
 # ---------------------------------------------------------------- configuration
 BASE_URL = "https://pandaswise.com/"   # <- the ONE line to change for a custom domain
@@ -127,6 +128,8 @@ def load_pages():
         meta = json.loads(m.group(1))
         meta["slug"] = slug
         meta["body"] = raw[m.end():]
+        meta["path"] = path
+        meta["raw"] = raw
         meta.setdefault("kind", "pillar")
         meta.setdefault("short", meta.get("h1", slug))
         pages[slug] = meta
@@ -288,6 +291,19 @@ def render(p, pages):
 
 def build():
     pages = load_pages()
+    # ---- LEGAL HOLD GATE: held pages are removed here, so they never reach the root output, the blog
+    # index, related links, sitemap.xml, llms.txt or the IndexNow list (indexnow.sh filters via legal_gate).
+    held = legal_gate.gate(pages, SOURCES)
+    for slug in held:
+        out = os.path.join(ROOT, slug + ".html")
+        if not os.path.exists(out): continue
+        tracked = subprocess.run(["git", "-C", ROOT, "ls-files", "--error-unmatch", slug + ".html"],
+                                 capture_output=True).returncode == 0
+        if tracked:
+            print(f"  !! LEGAL GATE: {slug}.html is currently LIVE but now held; left in place for a human decision "
+                  "(the check below will fail, so nothing can be pushed until it is resolved).")
+        else:
+            os.remove(out); print(f"  removed unpublished held output {slug}.html")
     for p in pages.values():
         for s in p.get("related", []):
             if s not in pages: raise SystemExit(f"{p['slug']}: unknown related slug {s}")
@@ -321,7 +337,9 @@ def build():
     rb.append(f"Sitemap: {BASE_URL}sitemap.xml")
     open(os.path.join(ROOT, "robots.txt"), "w").write("\n".join(rb) + "\n")
     # llms.txt
-    def item(s): return f"- [{pages[s].get('link_text', pages[s]['h1'])}]({url_for(s)}): {pages[s]['description']}"
+    def item(s):
+        if s not in pages: return None  # held by the legal gate
+        return f"- [{pages[s].get('link_text', pages[s]['h1'])}]({url_for(s)}): {pages[s]['description']}"
     guides = ["giant-panda", "red-panda", "diet", "behavior", "habitat", "conservation", "giant-vs-red-panda", "faq", "glossary"]
     posts = sorted([p["slug"] for p in pages.values() if p["kind"] == "post"])
     w = url_for("where-to-see-pandas")
@@ -340,6 +358,7 @@ def build():
          f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [
          "", "## Optional", item("about"), item("contact"), item("terms"), item("privacy"), item("disclaimer")]
+    L = [x for x in L if x is not None]
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(L) + "\n")
     # IndexNow key file
     open(os.path.join(ROOT, INDEXNOW_KEY + ".txt"), "w").write(INDEXNOW_KEY)
@@ -350,6 +369,9 @@ def build():
     else:
         open(cname, "w").write(host + "\n")
     print(f"built {len(pages)} pages + 404 for {BASE_URL}")
+    # ---- LEGAL HOLD CHECK on the finished output: fail the build loudly if held content would go out
+    if legal_gate.check() != 0:
+        raise SystemExit("BUILD FAILED: legal hold check found held content in the output. Do not commit or push.")
 
 if __name__ == "__main__":
     build()
