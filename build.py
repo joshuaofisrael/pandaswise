@@ -45,6 +45,7 @@ SOURCES = {
  "iucn-giant": ("IUCN Red List: Giant panda, Ailuropoda melanoleuca (2016 assessment)", "https://www.iucnredlist.org/species/712/121745669"),
  "iucn-red": ("IUCN Red List: Red panda, Ailurus fulgens (2015 assessment)", "https://www.iucnredlist.org/species/714/110023718"),
  "si-giant": ("Smithsonian's National Zoo and Conservation Biology Institute: Giant panda", "https://nationalzoo.si.edu/animals/giant-panda"),
+ "anton2006": ("Antón, M., Salesa, M. J., Pastor, J. F., Peigné, S. and Morales, J. (2006), Implications of the functional anatomy of the hand and forearm of Ailurus fulgens (Carnivora, Ailuridae) for the evolution of the false thumb in pandas, Journal of Anatomy 209(6): 757 to 764. DOI 10.1111/j.1469-7580.2006.00649.x", "https://doi.org/10.1111/j.1469-7580.2006.00649.x"),
  "si-red": ("Smithsonian's National Zoo and Conservation Biology Institute: Red panda", "https://nationalzoo.si.edu/animals/red-panda"),
  "sdz-giant": ("San Diego Zoo Wildlife Alliance, Animals and Plants: Giant panda", "https://animals.sandiegozoo.org/animals/giant-panda"),
  "sdz-red": ("San Diego Zoo Wildlife Alliance, Animals and Plants: Red panda", "https://animals.sandiegozoo.org/animals/red-panda"),
