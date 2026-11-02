@@ -103,6 +103,12 @@ SOURCES = {
  "liu2001": ("Liu, J., Linderman, M., Ouyang, Z., An, L., Yang, J. and Zhang, H. (2001), Ecological degradation in protected areas: the case of Wolong Nature Reserve for giant pandas, Science 292(5514): 98 to 101. DOI 10.1126/science.1058104", "https://doi.org/10.1126/science.1058104"),
  "li2015": ("Li, R., Xu, M., Wong, M. H. G., Qiu, S., Li, X., Ehrenfeld, D. and Li, D. (2015), Climate change threatens giant panda protection in the 21st century, Biological Conservation 182: 93 to 101. DOI 10.1016/j.biocon.2014.11.037", "https://doi.org/10.1016/j.biocon.2014.11.037"),
  "zhang2018": ("Zhang, M., Zhang, Z., Li, Z., Hong, M., Zhou, X., Zhou, S. et al. (2018), Giant panda foraging and movement patterns in response to bamboo shoot growth, Environmental Science and Pollution Research 25(9): 8636 to 8643. DOI 10.1007/s11356-017-0919-9", "https://doi.org/10.1007/s11356-017-0919-9"),
+ "qiao2018": ("Qiao, M., Zhou, Y., Connor, T., Li, R., Tang, D., Zhang, H. and Ran, J. (2018), Diagnosing zygosity in giant panda twins using short tandem repeats, Twin Research and Human Genetics 21(6): 480 to 485. DOI 10.1017/thg.2018.59", "https://doi.org/10.1017/thg.2018.59"),
+ "snyder2016": ("Snyder, R. J., Perdue, B. M., Zhang, Z., Maple, T. L. and Charlton, B. D. (2016), Giant panda maternal care: a test of the experience constraint hypothesis, Scientific Reports 6: 27509. DOI 10.1038/srep27509", "https://doi.org/10.1038/srep27509"),
+ "heiderer2018": ("Heiderer, M., Westenberg, C., Li, D., Zhang, H., Preininger, D. and Dungl, E. (2018), Giant panda twin rearing without assistance requires more interactions and less rest of the mother: a case study at Vienna Zoo, PLOS ONE 13(11): e0207433. DOI 10.1371/journal.pone.0207433", "https://doi.org/10.1371/journal.pone.0207433"),
+ "wang2004qinling": ("Wang, D., Zhu, X. and Pan, W. (2004), Life history traits and reproduction of giant pandas in the Qinling Mountains of China, in Lindburg, D. and Baragona, K. (eds), Giant Pandas: Biology and Conservation, University of California Press, 81 to 87. DOI 10.1525/california/9780520238671.003.0007", "https://doi.org/10.1525/california/9780520238671.003.0007"),
+ "si-twins": ("Smithsonian's National Zoo and Conservation Biology Institute: A second cub is born (giant panda twin hand rearing protocol)", "https://nationalzoo.si.edu/animals/news/second-cub-born"),
+ "aws-twin": ("Adventure World and the Chengdu Research Base of Giant Panda Breeding, joint project for the conservation of giant pandas: World's first simultaneous twin raising in captivity", "https://www.aws-s.com/en/panda_breeding_and_research/en/research/twin.html"),
 }
 
 ORG = {"@type": "Organization", "@id": BASE_URL + "#organization", "name": SITE,
@@ -257,8 +263,14 @@ def render(p, pages):
     if p["kind"] == "blog_index":
         posts = sorted([q for q in pages.values() if q["kind"] == "post"],
                        key=lambda q: (q["published"], q["h1"]), reverse=True)
+        def thumb_html(q):
+            t = q.get("thumb")
+            if not t: return ""
+            return (f'<img src="{R}{t["src"]}" alt="{esc(t.get("alt", ""))}" width="260" height="160" '
+                    'loading="lazy" decoding="async" style="width:100%;max-width:260px;height:160px;'
+                    'object-fit:cover;border-radius:12px;margin-bottom:.6rem;display:block">')
         body = body.replace("{{POSTS}}", "".join(
-            f'<article class="card post-card"><h2><a href="{rel_href(q["slug"], depth)}">{esc(q["h1"])}</a></h2>'
+            f'<article class="card post-card">{thumb_html(q)}<h2><a href="{rel_href(q["slug"], depth)}">{esc(q["h1"])}</a></h2>'
             f'<p class="meta">{fmt_date(q["published"])}</p><p>{esc(q["description"])}</p></article>' for q in posts))
     out.append(body)
     if p.get("faq"):
