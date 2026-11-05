@@ -68,3 +68,12 @@ figure.photo:hover,.photo-strip figure:hover,.photo-pair figure:hover{transform:
 main h2{position:relative}main>h2::after,main>section>h2::after{content:"";display:block;width:64px;height:4px;margin-top:.35rem;border-radius:4px;background:linear-gradient(90deg,var(--neon-pink),var(--neon-cyan))}
 .tile{border-top:4px solid var(--neon-pink)}.tile.redp{border-top-color:var(--neon-cyan)}
 @media(prefers-reduced-motion:reduce){figure.photo,.photo-strip figure,.photo-pair figure{transition:none}figure.photo:hover,.photo-strip figure:hover,.photo-pair figure:hover{transform:none}}
+
+/* style-pass 2026-11-05: focus, readable measure, footer wrap, image ratios, mobile */
+:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+a:focus-visible,button:focus-visible,.nav a:focus-visible,.site-header a:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+article,.post,.prose,.entry,.guide-body{max-width:42rem}
+article p,.post p,.prose p,main p{line-height:1.7;max-width:68ch}
+footer,.site-footer{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.card img,article img,.post img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+@media (max-width:640px){main,.content{padding-left:12px;padding-right:12px}}
