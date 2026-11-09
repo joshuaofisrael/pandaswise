@@ -42,6 +42,9 @@ LOGO = ('<svg role="img" width="36" height="36" viewBox="0 0 64 64" aria-labelle
 
 
 SOURCES = {
+ "wwf-red-facts": ("WWF: Where do red pandas live? And other red panda facts", "https://www.worldwildlife.org/resources/facts/where-do-red-pandas-live-and-other-red-panda-facts/"),
+ "si-red-bear": ("Smithsonian's National Zoo: Is a red panda a bear? And more red panda facts", "https://www.nationalzoo.si.edu/animals/news/red-panda-bear-and-more-red-panda-facts"),
+ "si-red-asa": ("Smithsonian's National Zoo: Meet red pandas Asa and Chris-Anne", "https://nationalzoo.si.edu/animals/news/meet-red-pandas-asa-and-chris-anne"),
  "iucn-giant": ("IUCN Red List: Giant panda, Ailuropoda melanoleuca (2016 assessment)", "https://www.iucnredlist.org/species/712/121745669"),
  "iucn-red": ("IUCN Red List: Red panda, Ailurus fulgens (2015 assessment)", "https://www.iucnredlist.org/species/714/110023718"),
  "si-giant": ("Smithsonian's National Zoo and Conservation Biology Institute: Giant panda", "https://nationalzoo.si.edu/animals/giant-panda"),
