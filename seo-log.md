@@ -40,3 +40,6 @@ LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt u
 - 2026-10-26 (Joshua's SEO push via PA): new evergreen article how long do pandas live (Smithsonian, Guinness, 3 Crossref-verified DOIs, FAQ, existing photos); titles trimmed to <=60 and descriptions to <=155 on all indexable non-legal pages; removed inaccurate 'no ads' line on teachers page; contextual links from giant panda + red panda pillars and endangered post, related lists on 6 posts. Built after 19:45.
 - 2026-11-06: evergreen how-do-red-pandas-climb-down-trees (AI mossy-branch + CC0 autumn-tree), sitemap/llms via build, IndexNow pending.
 - 2026-11-09: evergreen why-do-red-pandas-have-bushy-tails (ChatGPT draft, light edits; 2 new AI images ai-red-panda-tail-branch, ai-red-panda-tail-curled-snow; homepage featured card, credits rows), sitemap/llms via build.
+
+## 2026-11-13 — Evergreen: Where do giant pandas live in the wild?
+- Published /blog/where-do-giant-pandas-live.html (written by Grok Bot; sources checked 13 Nov 2026: WWF UK, Smithsonian National Zoo, ESABII Data Portal) with 1 reused AI image (ai-giant-panda-bamboo-forest.webp, caption links /credits/#ai), blog index, homepage card, credits, sitemap, llms.txt via build.py.
