@@ -42,6 +42,8 @@ LOGO = ('<svg role="img" width="36" height="36" viewBox="0 0 64 64" aria-labelle
 
 
 SOURCES = {
+ "wwf-uk-giant": ("WWF UK: Giant panda", "https://www.wwf.org.uk/learn/wildlife/giant-pandas"),
+ "esabii-giant": ("ESABII Data Portal (Biodiversity Center of Japan): Ailuropoda melanoleuca", "https://www.esabii.biodic.go.jp/database/mammal/carnivora/ailuropoda_melanoleuca.html"),
  "nobrien1985": ("O'Brien, S. J., Nash, W. G., Wildt, D. E., Bush, M. E., Benveniste, R. E. (1985). A molecular solution to the riddle of the giant panda's phylogeny. Nature 317: 140 to 144. doi:10.1038/317140a0", "https://www.nature.com/articles/317140a0"),
  "iucn-bsg-panda": ("IUCN SSC Bear Specialist Group: Giant panda", "https://www.globalbearconservation.org/Species/species_cls/9"),
  "wwf-red-facts": ("WWF: Where do red pandas live? And other red panda facts", "https://www.worldwildlife.org/resources/facts/where-do-red-pandas-live-and-other-red-panda-facts/"),
