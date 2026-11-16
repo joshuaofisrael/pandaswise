@@ -43,3 +43,6 @@ LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt u
 
 ## 2026-11-13 — Evergreen: Where do giant pandas live in the wild?
 - Published /blog/where-do-giant-pandas-live.html (written by Grok Bot; sources checked 13 Nov 2026: WWF UK, Smithsonian National Zoo, ESABII Data Portal) with 1 reused AI image (ai-giant-panda-bamboo-forest.webp, caption links /credits/#ai), blog index, homepage card, credits, sitemap, llms.txt via build.py.
+
+## 2026-11-16 — Evergreen: How do scientists count wild giant pandas?
+- Published /blog/how-do-scientists-count-wild-pandas.html (ChatGPT draft, sources checked 16 Nov 2026: San Diego Zoo fact sheet, PMC genetic sampling study, two journal DOIs verified on Crossref; unverified bamboo bite-size claim removed) with 1 reused photo (giant-panda-among-plants, source link to credits), blog index/homepage card, sitemap, llms.txt.
