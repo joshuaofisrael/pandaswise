@@ -62,3 +62,4 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 - [Terms of use](https://pandaswise.com/terms.html): The terms for using PandasWise: general information only, no warranties, limitation of liability and Florida law.
 - [Privacy policy](https://pandaswise.com/privacy.html): How PandasWise handles personal data: only contact form and email messages, cookieless Cloudflare Web Analytics, Google advertising cookies and no other tracking cookies.
 - [Disclaimer](https://pandaswise.com/disclaimer.html): PandasWise disclaimer: how accurate our panda information is, why it is not professional advice, and our current lack of affiliate or advertising links.
+- [Image policy](https://pandaswise.com/image-policy/): How PandasWise uses pictures: real licensed photographs from Wikimedia Commons and labelled AI generated illustrations, and where the Source link under each image leads.

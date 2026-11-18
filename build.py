@@ -306,9 +306,10 @@ def render(p, pages):
     legal_line = (f'<p class="op">&copy; 2026 {LEGAL}. All rights reserved. {SITE} is a trade name of {LEGAL}, a Florida limited liability company.</p>'
                   if p.get("slug") in ("terms", "privacy", "disclaimer") else "")
     out.append(legal_line + f'<p class="flinks"><a href="{rel_href("terms", depth)}">Terms</a> &middot; <a href="{rel_href("privacy", depth)}">Privacy</a>'
-               f' &middot; <a href="{rel_href("disclaimer", depth)}">Disclaimer</a> &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
+               f' &middot; <a href="{rel_href("disclaimer", depth)}">Disclaimer</a> &middot; <a href="{rel_href("image-policy/index", depth)}">Image policy</a>'
+               f' &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
                f' &middot; <a href="{rel_href("about", depth)}">About</a> &middot; <a href="{rel_href("blog/index", depth)}">Blog</a></p>'
-               f'<p>{SITE}: original educational content about giant pandas and red pandas. All text is original. Real photos and AI generated images (always labelled) are credited on our <a href="{R}credits/">photo credits</a> page.</p></footer>')
+               f'<p>{SITE}: original educational content about giant pandas and red pandas. All text is original. Real photos and AI generated images (always labelled) are credited on our <a href="{R}credits/">photo credits</a> page; see our <a href="{R}image-policy/">image policy</a> for how we use pictures.</p></footer>')
     if CF_BEACON_TOKEN:
         out.append("<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
                    f"data-cf-beacon='{{\"token\": \"{CF_BEACON_TOKEN}\"}}'></script><!-- End Cloudflare Web Analytics -->")
@@ -383,7 +384,7 @@ def build():
          f"  - Sections: [Giant pandas by country]({w}#outside-china), [Giant pandas in China]({w}#china), "
          f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [
-         "", "## Optional", item("about"), item("contact"), item("terms"), item("privacy"), item("disclaimer")]
+         "", "## Optional", item("about"), item("contact"), item("terms"), item("privacy"), item("disclaimer"), item("image-policy/index")]
     L = [x for x in L if x is not None]
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(L) + "\n")
     # IndexNow key file

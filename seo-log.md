@@ -47,5 +47,11 @@ LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt u
 ## 2026-11-16 — Evergreen: How do scientists count wild giant pandas?
 - Published /blog/how-do-scientists-count-wild-pandas.html (ChatGPT draft, sources checked 16 Nov 2026: San Diego Zoo fact sheet, PMC genetic sampling study, two journal DOIs verified on Crossref; unverified bamboo bite-size claim removed) with 1 reused photo (giant-panda-among-plants, source link to credits), blog index/homepage card, sitemap, llms.txt.
 
+## 2026-11-18 — Image policy page (global rule, Joshua approved batch)
+- Added /image-policy/ (content/image-policy/index.html): explains the two kinds of pictures on the site, real licensed Wikimedia Commons photos (credited on /credits/) and AI generated illustrations (labelled in their captions, listed on /credits/#ai); same header, nav, Cloudflare beacon and GA4 as every other page; self canonical; WebPage + BreadcrumbList JSON-LD. No new images added to this page, so it needs no /credits/ licence row.
+- Footer (every page, via build.py): added an Image policy link next to Disclaimer, and a sentence pointing to it from the photo credits line. /credits/ page is unchanged and still linked.
+- Every existing photo caption's Source, Photo credits and AI image credits link (36 content files, all pillars, blog posts and the homepage, plus the where do red pandas live blog index thumbnail) now points to /image-policy/ or /image-policy/#ai instead of /credits/ or /credits/#ai. The /credits/ page itself still has the full per-photo table and is linked from /image-policy/ and the footer.
+- Added to sitemap.xml (lastmod 2026-11-18, self canonical) and llms.txt (Optional section). build.py and legal_gate.py --check both pass (56 pages, 0 held).
+
 ## 2026-11-18 — Evergreen: Where do red pandas live?
 - Published /blog/where-do-red-pandas-live.html (sources checked 18 Nov 2026, each HTTP 200: Smithsonian National Zoo species page, Smithsonian National Zoo red panda facts, WWF UK, San Diego Zoo Wildlife Alliance animals page, San Diego Zoo Wildlife Alliance Library distribution fact sheet) with 1 reused AI image (ai-red-panda-dusk.webp, caption links /credits/#ai), blog index, homepage card, credits, sitemap, llms.txt via build.py.
