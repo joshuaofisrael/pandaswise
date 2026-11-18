@@ -273,9 +273,12 @@ def render(p, pages):
         def thumb_html(q):
             t = q.get("thumb")
             if not t: return ""
-            return (f'<img src="{R}{t["src"]}" alt="{esc(t.get("alt", ""))}" width="260" height="160" '
+            img = (f'<img src="{R}{t["src"]}" alt="{esc(t.get("alt", ""))}" width="260" height="160" '
                     'loading="lazy" decoding="async" style="width:100%;max-width:260px;height:160px;'
                     'object-fit:cover;border-radius:12px;margin-bottom:.6rem;display:block">')
+            if t.get("credit") and t.get("credit_href"):
+                img += f'<p class="meta"><small><a href="{R}{t["credit_href"]}">{esc(t["credit"])}</a></small></p>'
+            return img
         body = body.replace("{{POSTS}}", "".join(
             f'<article class="card post-card">{thumb_html(q)}<h2><a href="{rel_href(q["slug"], depth)}">{esc(q["h1"])}</a></h2>'
             f'<p class="meta">{fmt_date(q["published"])}</p><p>{esc(q["description"])}</p></article>' for q in posts))

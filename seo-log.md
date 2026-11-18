@@ -46,3 +46,6 @@ LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt u
 
 ## 2026-11-16 — Evergreen: How do scientists count wild giant pandas?
 - Published /blog/how-do-scientists-count-wild-pandas.html (ChatGPT draft, sources checked 16 Nov 2026: San Diego Zoo fact sheet, PMC genetic sampling study, two journal DOIs verified on Crossref; unverified bamboo bite-size claim removed) with 1 reused photo (giant-panda-among-plants, source link to credits), blog index/homepage card, sitemap, llms.txt.
+
+## 2026-11-18 — Evergreen: Where do red pandas live?
+- Published /blog/where-do-red-pandas-live.html (sources checked 18 Nov 2026, each HTTP 200: Smithsonian National Zoo species page, Smithsonian National Zoo red panda facts, WWF UK, San Diego Zoo Wildlife Alliance animals page, San Diego Zoo Wildlife Alliance Library distribution fact sheet) with 1 reused AI image (ai-red-panda-dusk.webp, caption links /credits/#ai), blog index, homepage card, credits, sitemap, llms.txt via build.py.
