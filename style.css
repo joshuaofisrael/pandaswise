@@ -24,6 +24,14 @@ dt{font-weight:700;color:var(--green-d);margin-top:.8rem}dd{margin-left:1rem}
 .tablewrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{text-align:left;padding:.6rem .7rem;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--green-d);background:var(--mint);font-family:Nunito,system-ui,sans-serif;font-weight:700}tbody tr:nth-child(even){background:#fbfdf8}tbody tr:last-child td{border-bottom:0}
 .jump{display:flex;flex-wrap:wrap;gap:.45rem .5rem;font-size:.95rem;margin:1rem 0}.jump a{background:var(--pill);color:var(--green);padding:.25rem .8rem;border-radius:999px;text-decoration:none;font-weight:700}.jump a:hover{background:#d4ebc3}
 .related ul{columns:2}.sources ol{font-size:.9rem;padding-left:1.3rem}.sources li{margin:.2rem 0;word-break:break-word}
+.next-reads h2{font-size:1.2rem}
+.next-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.next-card{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+.next-main{display:block;color:inherit;text-decoration:none}
+.next-main:hover .next-title{text-decoration:underline}
+.next-title{display:block;padding:.55rem .75rem .2rem;font-weight:700;color:var(--green-d);line-height:1.35}
+.next-credit{margin:0;padding:0 .75rem .65rem;font-size:.78rem;line-height:1.4}
+.compare h2{font-size:1.15rem}
 .post-card h2{font-size:1.25rem;margin-bottom:.2rem}
 figure{margin:1rem 0}figcaption{font-size:.85rem;color:var(--muted)}svg.diagram{width:100%;height:auto;max-width:640px;display:block;margin:auto}
 form label{display:block;margin:.7rem 0 .25rem;font-weight:700}form input,form textarea{width:100%;padding:.65rem .8rem;border-radius:12px;border:1.5px solid #cbdcc0;background:#fff;color:var(--ink);font:inherit}form input:focus,form textarea:focus{outline:3px solid var(--pill);border-color:var(--btn)}
@@ -31,7 +39,7 @@ footer{text-align:center;padding:2.6rem 1rem 2rem;color:var(--ink);font-size:.97
 .contact-us{max-width:640px;margin:0 auto 1.3rem;padding:1.1rem 1.3rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}.contact-us h2{margin:0 0 .3rem;font-size:1.15rem;color:var(--green-d)}.contact-us p{margin:0;color:var(--ink);font-size:.97rem}.contact-us a{color:var(--green);font-weight:700}
 .card.feature{position:relative;border:2px solid var(--bamboo);background:linear-gradient(135deg,#f1f9ea,var(--peach));padding-right:4.5rem}.card.feature::after{content:"";position:absolute;top:1rem;right:1rem;width:44px;height:44px;background:var(--panda) center/contain no-repeat}.card.feature h2 a{color:var(--green-d);text-decoration:none}
 :focus-visible{outline:3px solid var(--btn-o);outline-offset:2px}
-@media(max-width:760px){.menu{display:block}nav{display:none;width:100%;flex-direction:column}body.open nav{display:flex}.hero{padding:1.4rem 1.1rem 1.2rem}.hero h1{font-size:1.85rem;padding-right:70px}.hero-doodle{width:78px;right:.6rem;top:.7rem}.related ul{columns:1}.card.feature{padding-right:1.4rem}.card.feature::after{width:34px;height:34px;top:.7rem;right:.7rem}.card.feature h2{padding-right:2.4rem}}
+@media(max-width:760px){.menu{display:block}nav{display:none;width:100%;flex-direction:column}body.open nav{display:flex}.hero{padding:1.4rem 1.1rem 1.2rem}.hero h1{font-size:1.85rem;padding-right:70px}.hero-doodle{width:78px;right:.6rem;top:.7rem}.related ul{columns:1}.next-grid{grid-template-columns:1fr}.card.feature{padding-right:1.4rem}.card.feature::after{width:34px;height:34px;top:.7rem;right:.7rem}.card.feature h2{padding-right:2.4rem}}
 @media(prefers-reduced-motion:reduce){.btn,.tile{transition:none}}
 /* Neon look (9 Oct 2026): glowing pink, electric lime and cyan accents; body text stays dark on light for AA contrast */
 :root{--neon-pink:#ff2fb3;--neon-lime:#b6ff3b;--neon-cyan:#2ff3ff;--night:#160b33;--night2:#2a0f57;--green:#7a1260;--green-d:#6a0f55;--btn:#c0157f;--btn-o:#b3410e;--bg:#fff7fd;--line:#f3d3ec}
