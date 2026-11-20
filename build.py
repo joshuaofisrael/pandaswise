@@ -49,7 +49,7 @@ SOURCES = {
  "wwf-red-facts": ("WWF: Where do red pandas live? And other red panda facts", "https://www.worldwildlife.org/resources/facts/where-do-red-pandas-live-and-other-red-panda-facts/"),
  "si-red-bear": ("Smithsonian's National Zoo: Is a red panda a bear? And more red panda facts", "https://www.nationalzoo.si.edu/animals/news/red-panda-bear-and-more-red-panda-facts"),
  "si-red-asa": ("Smithsonian's National Zoo: Meet red pandas Asa and Chris-Anne", "https://nationalzoo.si.edu/animals/news/meet-red-pandas-asa-and-chris-anne"),
- "iucn-giant": ("IUCN Red List: Giant panda, Ailuropoda melanoleuca (2016 assessment)", "https://www.iucnredlist.org/species/712/121745669"),
+ "iucn-giant": ("IUCN Red List: Giant panda, Ailuropoda melanoleuca (Vulnerable, assessed 2016)", "https://www.iucnredlist.org/species/712/121745669"),
  "iucn-red": ("IUCN Red List: Red panda, Ailurus fulgens (2015 assessment)", "https://www.iucnredlist.org/species/714/110023718"),
  "si-giant": ("Smithsonian's National Zoo and Conservation Biology Institute: Giant panda", "https://nationalzoo.si.edu/animals/giant-panda"),
  "anton2006": ("Antón, M., Salesa, M. J., Pastor, J. F., Peigné, S. and Morales, J. (2006), Implications of the functional anatomy of the hand and forearm of Ailurus fulgens (Carnivora, Ailuridae) for the evolution of the false thumb in pandas, Journal of Anatomy 209(6): 757 to 764. DOI 10.1111/j.1469-7580.2006.00649.x", "https://doi.org/10.1111/j.1469-7580.2006.00649.x"),
@@ -64,6 +64,7 @@ SOURCES = {
  "caro2017": ("Caro et al. (2017), Why is the giant panda black and white?, Behavioral Ecology", "https://academic.oup.com/beheco/article/28/3/657/3058530"),
  "ucdavis": ("UC Davis news: Why pandas are black and white", "https://www.ucdavis.edu/news/why-pandas-are-black-and-white-answered"),
  "xinhua-2026": ("Xinhua (14 June 2026): China's systematic push powers panda protection", "https://english.news.cn/20260614/1408bb65ae534b58b62bed4e5b74e01a/c.html"),
+ "xinhua-captive-2026": ("Xinhua (3 November 2026): Captive population of giant pandas in China reaches 830", "https://english.news.cn/20261103/cd32ab1608194c73bebe506bb3de39ed/c.html"),
  "xinhua-park": ("Xinhua (23 November 2025): National park boosts panda population", "https://english.news.cn/20251123/b5a4098b763f4f9e896a507f5e0e90ef/c.html"),
  "bbc-2021": ("BBC News (2021): Giant pandas no longer endangered but still vulnerable, says China", "https://www.bbc.co.uk/news/world-asia-china-57773472"),
  "endo1999": ("Endo et al. (1999), Role of the giant panda's pseudo thumb, Nature 397: 309 to 310. DOI 10.1038/16830", "https://doi.org/10.1038/16830"),
@@ -180,6 +181,69 @@ def cite_box(p, canon):
         f'<p><strong>Chicago</strong><br>{esc(chicago)}</p></section>'
     )
 
+def page_thumb(p):
+    """First picture on a page, for related-reading cards. AI files are named ai-."""
+    t = p.get("thumb") or {}
+    src = t.get("src")
+    if not src:
+        m = re.search(r'<img\b[^>]*\bsrc="@/([^"]+)"', p.get("body") or "")
+        src = m.group(1) if m else ""
+    if not src:
+        return None
+    return {"src": src, "ai": src.startswith("ai-") or "/ai-" in src}
+
+def split_related(rels):
+    """3 to 4 links for the middle of the page, and 3 to 4 more at the end."""
+    rels = list(rels)
+    n = len(rels)
+    if n >= 7:
+        return rels[:4], rels[4:8]
+    if n >= 6:
+        return rels[:3], rels[3:6]
+    if n >= 4:
+        return rels[:3], rels[:4]
+    return rels, rels
+
+def next_reads(slugs, pages, depth, R, heading):
+    items = []
+    for s in slugs:
+        if s not in pages:
+            continue
+        q = pages[s]
+        thumb = page_thumb(q)
+        img = ""
+        credit = ""
+        if thumb:
+            img = (f'<img src="{R}{thumb["src"]}" alt="" width="320" height="180" '
+                   'loading="lazy" decoding="async">')
+            if thumb["ai"]:
+                credit = f'<p class="next-credit"><a href="{R}image-policy/#ai">AI generated image</a></p>'
+            else:
+                credit = f'<p class="next-credit"><a href="{R}image-policy/">Photograph</a></p>'
+        title = esc(q.get("link_text") or q["h1"])
+        items.append(
+            f'<li class="next-card"><a class="next-main" href="{rel_href(s, depth)}">{img}'
+            f'<span class="next-title">{title}</span></a>{credit}</li>')
+    if not items:
+        return ""
+    return (f'<section class="card next-reads" aria-label="{esc(heading)}"><h2>{esc(heading)}</h2>'
+            f'<ul class="next-grid">{"".join(items)}</ul></section>')
+
+def insert_mid(body, block):
+    """Place the mid-article next reads before a later heading, not only at the bottom."""
+    if not block:
+        return body
+    idxs = [m.start() for m in re.finditer(r"<h2\b", body)]
+    if not idxs:
+        return body
+    if len(idxs) >= 4:
+        i = idxs[len(idxs) // 2]
+    elif len(idxs) >= 2:
+        i = idxs[1]
+    else:
+        i = idxs[0]
+    return body[:i] + block + body[i:]
+
 def render(p, pages):
     slug, depth = p["slug"], p["slug"].count("/")
     R = "../" * depth
@@ -266,32 +330,36 @@ def render(p, pages):
             pub = fmt_date(p["published"]); mod = fmt_date(p["modified"])
             rev = fmt_date(p.get("reviewed", p["modified"]))
             line = f'Published {pub} &middot; Last updated {mod} &middot; Last reviewed {rev}'
-            out.append(f'<p class="meta">{line} &middot; By the {SITE} team</p>')
+            team = f'<a href="{rel_href("editorial", depth)}">{SITE} team</a>'
+            out.append(f'<p class="meta">{line} &middot; By the {team}</p>')
     if p["kind"] == "blog_index":
         posts = sorted([q for q in pages.values() if q["kind"] == "post"],
                        key=lambda q: (q["published"], q["h1"]), reverse=True)
         def thumb_html(q):
-            t = q.get("thumb")
+            t = page_thumb(q)
             if not t: return ""
-            img = (f'<img src="{R}{t["src"]}" alt="{esc(t.get("alt", ""))}" width="260" height="160" '
+            img = (f'<img src="{R}{t["src"]}" alt="" width="260" height="160" '
                     'loading="lazy" decoding="async" style="width:100%;max-width:260px;height:160px;'
                     'object-fit:cover;border-radius:12px;margin-bottom:.6rem;display:block">')
-            if t.get("credit") and t.get("credit_href"):
-                img += f'<p class="meta"><small><a href="{R}{t["credit_href"]}">{esc(t["credit"])}</a></small></p>'
+            href = "image-policy/#ai" if t["ai"] else "image-policy/"
+            label = "AI generated image" if t["ai"] else "Photograph"
+            img += f'<p class="meta"><small><a href="{R}{href}">{label}</a></small></p>'
             return img
         body = body.replace("{{POSTS}}", "".join(
             f'<article class="card post-card">{thumb_html(q)}<h2><a href="{rel_href(q["slug"], depth)}">{esc(q["h1"])}</a></h2>'
             f'<p class="meta">{fmt_date(q["published"])}</p><p>{esc(q["description"])}</p></article>' for q in posts))
+    rels = [s for s in (p.get("related") or []) if s in pages]
+    mid_rels, end_rels = split_related(rels)
+    if mid_rels and p["kind"] in ("pillar", "post", "page") and "<h2" in body:
+        body = insert_mid(body, next_reads(mid_rels, pages, depth, R, "Read next"))
     out.append(body)
     if p.get("faq"):
         out.append('<section class="card faq" id="faq"><h2>' + esc(p.get("faq_title", "Frequently asked questions")) + "</h2>")
         for q, a in p["faq"]:
             out.append(f"<h3>{esc(q)}</h3><p>{a.replace('@/', R)}</p>")
         out.append("</section>")
-    if p.get("related"):
-        out.append('<section class="card related"><h2>Related guides</h2><ul>' + "".join(
-            f'<li><a href="{rel_href(s, depth)}">{esc(pages[s].get("link_text", pages[s]["h1"]))}</a></li>'
-            for s in p["related"]) + "</ul></section>")
+    if end_rels:
+        out.append(next_reads(end_rels, pages, depth, R, "Related guides"))
     srcs = [SOURCES[k] for k in p.get("src", [])] + [tuple(x) for x in p.get("sources", [])]
     if srcs:
         p = dict(p, sources=srcs)
@@ -307,6 +375,7 @@ def render(p, pages):
                   if p.get("slug") in ("terms", "privacy", "disclaimer") else "")
     out.append(legal_line + f'<p class="flinks"><a href="{rel_href("terms", depth)}">Terms</a> &middot; <a href="{rel_href("privacy", depth)}">Privacy</a>'
                f' &middot; <a href="{rel_href("disclaimer", depth)}">Disclaimer</a> &middot; <a href="{rel_href("image-policy/index", depth)}">Image policy</a>'
+               f' &middot; <a href="{rel_href("editorial", depth)}">Editorial policy</a>'
                f' &middot; <a href="{rel_href("contact", depth)}">Contact</a>'
                f' &middot; <a href="{rel_href("about", depth)}">About</a> &middot; <a href="{rel_href("blog/index", depth)}">Blog</a></p>'
                f'<p>{SITE}: original educational content about giant pandas and red pandas. All text is original. Real photos and AI generated images (always labelled) are credited on our <a href="{R}credits/">photo credits</a> page; see our <a href="{R}image-policy/">image policy</a> for how we use pictures.</p></footer>')
@@ -348,7 +417,7 @@ def build():
     open(os.path.join(ROOT, "404.html"), "w").write(nf)
     # sitemap
     idx = [p for p in pages.values() if not p.get("noindex")]
-    order = [s for s, _ in NAV] + ["about", "contact", "terms", "privacy", "disclaimer"]
+    order = [s for s, _ in NAV] + ["about", "editorial", "contact", "terms", "privacy", "disclaimer"]
     idx.sort(key=lambda p: (order.index(p["slug"]) if p["slug"] in order else 100, p["slug"]))
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for p in idx:
@@ -384,7 +453,7 @@ def build():
          f"  - Sections: [Giant pandas by country]({w}#outside-china), [Giant pandas in China]({w}#china), "
          f"[Red pandas by country]({w}#red-pandas), [Countries with no giant pandas now]({w}#none-now)",
          "", "## Blog"] + [item(s) for s in posts] + [
-         "", "## Optional", item("about"), item("contact"), item("terms"), item("privacy"), item("disclaimer"), item("image-policy/index")]
+         "", "## Optional", item("about"), item("editorial"), item("contact"), item("terms"), item("privacy"), item("disclaimer"), item("image-policy/index")]
     L = [x for x in L if x is not None]
     open(os.path.join(ROOT, "llms.txt"), "w").write("\n".join(L) + "\n")
     # IndexNow key file

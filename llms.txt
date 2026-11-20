@@ -24,8 +24,8 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
   - Sections: [Giant pandas by country](https://pandaswise.com/where-to-see-pandas.html#outside-china), [Giant pandas in China](https://pandaswise.com/where-to-see-pandas.html#china), [Red pandas by country](https://pandaswise.com/where-to-see-pandas.html#red-pandas), [Countries with no giant pandas now](https://pandaswise.com/where-to-see-pandas.html#none-now)
 
 ## Blog
-- [Are giant pandas bears?](https://pandaswise.com/blog/are-giant-pandas-bears.html): Yes, giant pandas are true bears in the family Ursidae. How scientists settled the old panda debate with genetic evidence.
-- [Are giant pandas still endangered?](https://pandaswise.com/blog/are-giant-pandas-still-endangered.html): No: the IUCN has listed giant pandas as Vulnerable since 2016. What that means, the latest wild population figures and what still threatens them.
+- [Are giant pandas bears?](https://pandaswise.com/blog/are-giant-pandas-bears.html): Yes. Giant pandas are bears (Ursidae). A 1985 Nature study and the IUCN Bear Specialist Group settled the old raccoon debate.
+- [Are giant pandas still endangered?](https://pandaswise.com/blog/are-giant-pandas-still-endangered.html): No. IUCN lists giant pandas as Vulnerable (2016), not Endangered. Nearly 1,900 live wild; China reported 830 in captivity on 3 Nov 2026.
 - [Are red pandas good climbers?](https://pandaswise.com/blog/are-red-pandas-good-climbers.html): Yes. Red pandas are skilled climbers with flexible ankles that let them climb headfirst down trunks, and long tails for balance. Here is how they do it.
 - [Are red pandas nocturnal?](https://pandaswise.com/blog/are-red-pandas-nocturnal.html): Red pandas are not strictly nocturnal. They are mostly crepuscular, busiest at dawn and dusk, and awake about 45% of the day. What studies show.
 - [Are red pandas related to giant pandas?](https://pandaswise.com/blog/are-red-pandas-related-to-giant-pandas.html): Red and giant pandas are only distant relatives: one is a bear, the other the last of its own family. What DNA shows, and why both have a false thumb.
@@ -46,7 +46,7 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 - [How strong is a giant panda's bite?](https://pandaswise.com/blog/how-strong-is-a-giant-panda-bite.html): Giant pandas have one of the strongest bites of any bear for their size. How their skull, jaw muscles and molars crush bamboo, with the research behind it.
 - [Is giant panda habitat shrinking?](https://pandaswise.com/blog/is-giant-panda-habitat-shrinking.html): Panda numbers are rising, but satellite studies show giant panda habitat became smaller and more broken up between 1988 and 2013. Here is what the research says.
 - [What do red pandas eat?](https://pandaswise.com/blog/what-do-red-pandas-eat.html): Red pandas eat mostly bamboo leaf tips and shoots, plus some fruit, roots, insects and the odd egg. What field and genetic studies show about their diet.
-- [Where do giant pandas live in the wild?](https://pandaswise.com/blog/where-do-giant-pandas-live.html): Wild giant pandas live in bamboo forests in six mountain ranges in Sichuan, Shaanxi and Gansu, China. Where, how high up, and why only there.
+- [Where do giant pandas live in the wild?](https://pandaswise.com/blog/where-do-giant-pandas-live.html): Wild giant pandas live only in six mountain ranges in Sichuan, Shaanxi and Gansu. The IUCN lists them as extinct in Hubei and Hunan.
 - [Where do red pandas live?](https://pandaswise.com/blog/where-do-red-pandas-live.html): Wild red pandas live in bamboo mountain forests in Nepal, India, Bhutan, Myanmar and China. How high, and what the forest needs.
 - [Why are baby pandas so small?](https://pandaswise.com/blog/why-are-baby-pandas-so-small.html): A newborn giant panda weighs about 3 to 5 ounces, roughly 1/900th of its mother. Skeletal scans suggest a short gestation after implantation explains why.
 - [Why are giant pandas black and white?](https://pandaswise.com/blog/why-are-pandas-black-and-white.html): Why giant pandas are black and white: the leading study points to snow and shade camouflage for the body and signalling for the ears and eye patches.
@@ -58,6 +58,7 @@ Content is general education written from cited sources (IUCN, WWF, Smithsonian'
 
 ## Optional
 - [About PandasWise](https://pandaswise.com/about.html): Who runs PandasWise, what it covers, how pages are researched and sourced, how we keep the zoo list current, and how to report a correction.
+- [Editorial policy](https://pandaswise.com/editorial.html): How the PandasWise team chooses sources, dates pages, labels images, corrects mistakes, and keeps zoo facts tied to official pages.
 - [Contact PandasWise](https://pandaswise.com/contact.html): Contact the PandasWise team with corrections, zoo updates, questions or suggestions by email or through our simple contact form.
 - [Terms of use](https://pandaswise.com/terms.html): The terms for using PandasWise: general information only, no warranties, limitation of liability and Florida law.
 - [Privacy policy](https://pandaswise.com/privacy.html): How PandasWise handles personal data: only contact form and email messages, cookieless Cloudflare Web Analytics, Google advertising cookies and no other tracking cookies.

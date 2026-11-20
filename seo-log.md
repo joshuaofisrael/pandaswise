@@ -53,5 +53,12 @@ LLC Florida fix 14:3x BST: Terms governing law and venue now Florida; llms.txt u
 - Every existing photo caption's Source, Photo credits and AI image credits link (36 content files, all pillars, blog posts and the homepage, plus the where do red pandas live blog index thumbnail) now points to /image-policy/ or /image-policy/#ai instead of /credits/ or /credits/#ai. The /credits/ page itself still has the full per-photo table and is linked from /image-policy/ and the footer.
 - Added to sitemap.xml (lastmod 2026-11-18, self canonical) and llms.txt (Optional section). build.py and legal_gate.py --check both pass (56 pages, 0 held).
 
+## 2026-11-20 — Compliance and engagement (no new article)
+- Editorial policy at /editorial.html. Footer and the article byline ("PandasWise team") link to it.
+- Related reading on posts and guides is now 3 to 4 thumbnail cards mid article and 3 to 4 at the end. AI images labelled, real photographs credited, both linking to the image policy. Blog index cards use the same pictures.
+- Refreshed /blog/are-giant-pandas-still-endangered.html (sources checked 20 Nov 2026). Captive total in China updated from 808 at the end of 2025 to 830 on 3 November 2026 (Xinhua). IUCN mature count 500 to 1,000 kept distinct from the wild total. Same captive figure synced on conservation, FAQ and glossary.
+- Quality pass on the two thinnest posts: /blog/are-giant-pandas-bears.html and /blog/where-do-giant-pandas-live.html.
+- Homepage photo strip captions now link to the image policy.
+
 ## 2026-11-18 — Evergreen: Where do red pandas live?
 - Published /blog/where-do-red-pandas-live.html (sources checked 18 Nov 2026, each HTTP 200: Smithsonian National Zoo species page, Smithsonian National Zoo red panda facts, WWF UK, San Diego Zoo Wildlife Alliance animals page, San Diego Zoo Wildlife Alliance Library distribution fact sheet) with 1 reused AI image (ai-red-panda-dusk.webp, caption links /credits/#ai), blog index, homepage card, credits, sitemap, llms.txt via build.py.
